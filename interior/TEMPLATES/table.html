@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         * {box-sizing: border-box;}
+            .container{
+              
+              width: 100vw;
+              height: 100vh;
+            }
+            body { 
+              margin: 0;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            .header {
+             
+              overflow: hidden;
+              background-color:rgb(243, 128, 147);
+              padding: 20px 10px;
+            }
+            
+            .header a {
+              float: left;
+              color: black;
+              text-align: center;
+              padding: 12px;
+              text-decoration: none;
+              font-size: 18px; 
+              line-height: 25px;
+              border-radius: 4px;
+            }
+            
+            .header a.logo {
+              font-size: 25px;
+              font-weight: bold;
+            }
+            
+            .header a:hover {
+              background-color: #ddd;
+              color: black;
+            }
+            
+            .header a.active {
+              background-color: dodgerblue;
+              color: white;
+              
+            }
+    
+           
+              
+    
+            .header-right1 {
+                gap: 2rem;
+                float: right;
+                margin-top: 4rem;
+              }
+            
+            @media screen and (max-width: 500px) {
+              .header a {
+                float: none;
+                display: block;
+                text-align: left;
+              }
+            }
+              .header-right {
+                float: none;
+              }
+              .header-right {
+                float: right;
+              }
+              #FURNITURE{
+                color: rgb(255, 244, 244);
+                gap:3rem;
+                margin-top: 1REM;
+              }
+    
+    
+    
+    
+              div.gallery {
+                border: 1px solid #ccc;
+              }
+              
+              div.gallery:hover {
+                border: 1px solid #777;
+              }
+              
+              div.gallery img {
+                width: 100%;
+                height: auto;
+              }
+              
+              div.desc {
+                padding: 15px;
+                text-align: center;
+              }
+              
+              * {
+                box-sizing: border-box;
+              }
+              .respnsive1{
+               
+                height: 100%;
+                width: 100%;
+              }
+              .responsive {
+    
+                padding: 0 6px;
+                float: left;
+                margin-top: 2rem;
+                width: 24.99999%;
+              }
+              
+              @media only screen and (max-width: 700px) {
+                .responsive {
+                  width: 49.99999%;
+                  margin: 6px 0;
+                }
+              }
+              
+              @media only screen and (max-width: 500px) {
+                .responsive {
+                  width: 100%;
+                }
+              }
+              
+              .clearfix:after {
+                content: "";
+                display: table;
+                clear: both;
+              }
+
+    
+
+
+
+              .cart-button {
+                position: fixed;
+                background-color: #28a745;
+                padding: 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+
+            .add-to-cart {
+              padding: 10px;
+              background-color: #28a745;
+              color: white;
+              border: none;
+              cursor: pointer;
+          }
+          
+          .add-to-cart:hover {
+              background-color: #218838;
+          }
+          
+          .cart-modal, .checkout-modal {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5);
+              justify-content: center;
+              align-items: center;
+          }
+          
+          .cart-content, .checkout-content {
+              background-color: white;
+              padding: 20px;
+              border-radius: 8px;
+              width: 300px;
+          }
+          
+          button {
+              padding: 10px;
+              margin-top: 10px;
+              cursor: pointer;
+          }
+          
+          input {
+              width: 100%;
+              padding: 10px;
+              margin-top: 5px;
+              margin-bottom: 10px;
+          }
+          
+             </style>
+</head>
+<body>
+    
+    <div id="container">
+
+      <button class="cart-button" onclick="viewCart()">View Cart (<span id="cart-count">0</span>)</button>
+
+        <div class="respnsive1">
+
+          
+         
+
+
+
+        <div class="responsive">
+    <div class="gallery">
+  <a target="_blank" href="https://media.istockphoto.com/id/111950974/photo/village-pub-brick-wall-with-tables-and-chairs.webp?a=1&b=1&s=612x612&w=0&k=20&c=MV01P2u-cJxL6QYjcEWflBKNRpiJwt1Zslt7UIk7cgQ=">
+  <img src="https://media.istockphoto.com/id/111950974/photo/village-pub-brick-wall-with-tables-and-chairs.webp?a=1&b=1&s=612x612&w=0&k=20&c=MV01P2u-cJxL6QYjcEWflBKNRpiJwt1Zslt7UIk7cgQ=" alt="Cinque Terre">
+  </a>
+ <div class="desc"><p>$50</p><button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button></div>
+
+ </div>
+ </div>
+              
+            <div class="responsive">
+             <div class="gallery">
+           <a target="_blank" href="https://plus.unsplash.com/premium_photo-1724526853404-d3fdddb261a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudCUyMHRhYmxlfGVufDB8fDB8fHww">
+           <img src="https://plus.unsplash.com/premium_photo-1724526853404-d3fdddb261a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudCUyMHRhYmxlfGVufDB8fDB8fHww" alt="Cinque Terre">
+          </a>
+          <div class="desc"><p>$100</p>
+            <button class="add-to-cart" onclick="addToCart('Product Name', 100)">Add to Cart</button>
+          </div>
+          
+       </div>
+           </div>
+
+
+
+
+           <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://images.unsplash.com/photo-1630525931270-ca909298cc33?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMHRhYmxlfGVufDB8fDB8fHww">
+          <img src="https://images.unsplash.com/photo-1630525931270-ca909298cc33?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMHRhYmxlfGVufDB8fDB8fHww" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$80</p>
+          <button class="add-to-cart" onclick="addToCart('Product Name', 80)">Add to Cart</button>
+
+         </div>
+
+      </div>
+          </div>
+
+
+
+
+          <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://t4.ftcdn.net/jpg/04/31/99/01/240_F_431990107_iVRskbBTT95hgpjrxUCpiw6h1uG9Mr6u.jpg">
+          <img src="https://t4.ftcdn.net/jpg/04/31/99/01/240_F_431990107_iVRskbBTT95hgpjrxUCpiw6h1uG9Mr6u.jpg" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$80</p>
+          <button class="add-to-cart" onclick="addToCart('Product Name', 80)">Add to Cart</button>
+        </div>
+      </div>
+          </div>
+
+
+
+          <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://media.istockphoto.com/id/2032134576/photo/family-lunch-and-service-of-waiter-at-restaurant-with-plate-fun-and-eating-at-diner-together.webp?a=1&b=1&s=612x612&w=0&k=20&c=3A6SiiCuBp_T2F2MVdqQLq9F2SUVU_TPntXqtxGAOBg=">
+          <img src="https://media.istockphoto.com/id/2032134576/photo/family-lunch-and-service-of-waiter-at-restaurant-with-plate-fun-and-eating-at-diner-together.webp?a=1&b=1&s=612x612&w=0&k=20&c=3A6SiiCuBp_T2F2MVdqQLq9F2SUVU_TPntXqtxGAOBg=" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$150</p><button class="add-to-cart" onclick="addToCart('Product Name', 150)">Add to Cart</button></div>
+      </div>
+          </div>
+
+
+
+          <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://t4.ftcdn.net/jpg/02/92/55/31/240_F_292553161_wLwr67ZPkRUq5wQOLrOcBRafYXvdHi54.jpg">
+          <img src="https://t4.ftcdn.net/jpg/02/92/55/31/240_F_292553161_wLwr67ZPkRUq5wQOLrOcBRafYXvdHi54.jpg" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$250</p><button class="add-to-cart" onclick="addToCart('Product Name', 250)">Add to Cart</button></div>
+      </div>
+          </div>
+
+
+          
+          <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://t4.ftcdn.net/jpg/02/29/38/39/240_F_229383960_iVZedpJtHC0VObT6eM38XopiqdeppCNO.jpg">
+          <img src="https://t4.ftcdn.net/jpg/02/29/38/39/240_F_229383960_iVZedpJtHC0VObT6eM38XopiqdeppCNO.jpg" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$50</p><button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button></div>
+      </div>
+          </div>
+
+
+          
+          <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://t4.ftcdn.net/jpg/01/08/71/89/240_F_108718954_koAmgnbFw6pheNyIw0Zy8RXuysDZT7F4.jpg">
+          <img src="https://t4.ftcdn.net/jpg/01/08/71/89/240_F_108718954_koAmgnbFw6pheNyIw0Zy8RXuysDZT7F4.jpg" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$350</p><button class="add-to-cart" onclick="addToCart('Product Name', 350)">Add to Cart</button></div>
+      </div>
+          </div>
+
+
+
+
+
+          <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://t4.ftcdn.net/jpg/04/39/51/55/240_F_439515530_MZUYX4Pwtm1pCH83NycO7cix6soZIJgV.jpg">
+          <img src="https://t4.ftcdn.net/jpg/04/39/51/55/240_F_439515530_MZUYX4Pwtm1pCH83NycO7cix6soZIJgV.jpg" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$300</p><button class="add-to-cart" onclick="addToCart('Product Name', 300)">Add to Cart</button></div>
+      </div>
+          </div>
+
+
+
+
+
+          <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://t4.ftcdn.net/jpg/04/22/33/27/240_F_422332774_eRAba1EQJ45yFhRFiB3oNUiDG4dO36oX.jpg">
+          <img src="https://t4.ftcdn.net/jpg/04/22/33/27/240_F_422332774_eRAba1EQJ45yFhRFiB3oNUiDG4dO36oX.jpg" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$170</p><button class="add-to-cart" onclick="addToCart('Product Name', 170)">Add to Cart</button></div>
+      </div>
+          </div>
+
+
+          
+
+          <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://t3.ftcdn.net/jpg/04/80/84/30/240_F_480843088_LStZCSbsqut1e4KgbXIDjgoD6aMXklZh.jpg">
+          <img src="https://t3.ftcdn.net/jpg/04/80/84/30/240_F_480843088_LStZCSbsqut1e4KgbXIDjgoD6aMXklZh.jpg" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$700</p><button class="add-to-cart" onclick="addToCart('Product Name', 700)">Add to Cart</button></div>
+      </div>
+          </div>
+
+
+          
+
+
+          <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://t4.ftcdn.net/jpg/04/41/33/33/240_F_441333347_cP8cMk19h2xBBj44rDoynQSyUIdvujqq.jpg">
+          <img src="https://t4.ftcdn.net/jpg/04/41/33/33/240_F_441333347_cP8cMk19h2xBBj44rDoynQSyUIdvujqq.jpg" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$450</p><button class="add-to-cart" onclick="addToCart('Product Name', 450)">Add to Cart</button></div>
+      </div>
+          </div>
+
+
+          
+
+
+
+          <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://t4.ftcdn.net/jpg/02/29/38/43/240_F_229384330_OsSTfohQmkZ7aLPBlerUrqFixuuB4KsJ.jpg">
+          <img src="https://t4.ftcdn.net/jpg/02/29/38/43/240_F_229384330_OsSTfohQmkZ7aLPBlerUrqFixuuB4KsJ.jpg" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$180</p><button class="add-to-cart" onclick="addToCart('Product Name', 150)">Add to Cart</button></div>
+      </div>
+          </div>
+
+
+
+
+          <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://t4.ftcdn.net/jpg/03/61/69/17/240_F_361691793_tP2ONkgEw3cpnu3blfgfzKCHa1ESbezL.jpg">
+          <img src="https://t4.ftcdn.net/jpg/03/61/69/17/240_F_361691793_tP2ONkgEw3cpnu3blfgfzKCHa1ESbezL.jpg" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$550</p><button class="add-to-cart" onclick="addToCart('Product Name', 550)">Add to Cart</button></div>
+      </div>
+          </div>
+
+
+
+
+          <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://t3.ftcdn.net/jpg/02/76/97/62/240_F_276976216_lhmM3injgw2psHKiSsvQ0m2kjUndcs7E.jpg">
+          <img src="https://t3.ftcdn.net/jpg/02/76/97/62/240_F_276976216_lhmM3injgw2psHKiSsvQ0m2kjUndcs7E.jpg" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$390</p><button class="add-to-cart" onclick="addToCart('Product Name', 390)">Add to Cart</button></div>
+      </div>
+          </div>
+
+
+
+          
+          <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://t4.ftcdn.net/jpg/06/36/09/03/240_F_636090311_7pYnibgNEb7dWMq3oPsUB0ss03Z8eD4q.jpg">
+          <img src="https://t4.ftcdn.net/jpg/06/36/09/03/240_F_636090311_7pYnibgNEb7dWMq3oPsUB0ss03Z8eD4q.jpg" alt="Cinque Terre">
+         </a>
+         <div class="desc"><p>$50</p><button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button></div>
+      </div>
+          </div>
+
+
+          
+        
+
+<!-- js-work for card -->
+        <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-content">
+          <h2>Your Cart</h2>
+          <ul id="cart-items"></ul>
+          <p><strong>Total: $<span id="total-amount">0</span></strong></p>
+          <button onclick="clearCart()">Clear Cart</button>
+          <button onclick="checkout()">Proceed to Checkout</button>
+          <button onclick="closeCart()">Close</button>
+      </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div id="checkout-modal" class="checkout-modal">
+      <div class="checkout-content">
+          <h2>Checkout</h2>
+          <p><strong>Total Amount: $<span id="checkout-total">0</span></strong></p>
+          <form id="checkout-form">
+              <label for="name">Full Name:</label>
+              <input type="text" id="name" placeholder="Enter your name" required><br>
+              <label for="address">Address:</label>
+              <input type="text" id="address" placeholder="Enter your address" required><br>
+              <button type="submit">Submit Order</button>
+          </form>
+          <button onclick="closeCheckout()">Close</button>
+      </div>
+  </div>
+
+  <script src="/static/script1.js"></script>   
+         
+   </div>
+   </div>
+</body>
+</html>

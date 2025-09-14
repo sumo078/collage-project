@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        
+        }
+        body { 
+          background-color: rgb(255, 192, 203);
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+       
+        div.gallery {
+          border: 1px solid #ccc;
+        }
+        
+        div.gallery:hover {
+          border: 1px solid #777;
+        }
+        
+        div.gallery img {
+          width: 100%;
+          height: auto;
+        }
+        
+        div.desc {
+          padding: 15px;
+          text-align: center;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        .respnsive1{
+         
+          height: 100%;
+          width: 100%;
+        }
+        .responsive {
+
+          padding: 0 6px;
+          float: left;
+          margin-top: 2rem;
+          width: 24.99999%;
+        }
+        
+        @media only screen and (max-width: 700px) {
+          .responsive {
+            width: 49.99999%;
+            margin: 6px 0;
+          }
+        }
+        
+        @media only screen and (max-width: 500px) {
+          .responsive {
+            width: 100%;
+          }
+        }
+        
+        .clearfix:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+          #container{
+            flex-direction: row;
+            display: flex;
+            justify-content: space-around;
+            height: 100%;
+            width: 100%;
+            float: right;
+          }
+
+
+          .cart-button {
+          position: fixed;
+            background-color: #28a745;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+
+        .add-to-cart {
+          padding: 10px;
+          background-color: #28a745;
+          color: white;
+          border: none;
+          cursor: pointer;
+      }
+      
+      .add-to-cart:hover {
+          background-color: #218838;
+      }
+      
+      .cart-modal, .checkout-modal {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          justify-content: center;
+          align-items: center;
+      }
+      
+      .cart-content, .checkout-content {
+          background-color: white;
+          padding: 20px;
+          border-radius: 8px;
+          width: 300px;
+      }
+      
+      button {
+          padding: 10px;
+          margin-top: 10px;
+          cursor: pointer;
+      }
+      
+      input {
+          width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          margin-bottom: 10px;
+      }
+      #offer{
+        position: fixed;
+        font-size: larger;
+        font-style: italic;
+        font-weight: 900;
+        color: RED;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </style>
+</head>
+<body>
+  <button class="cart-button" onclick="viewCart()">View Cart (<span id="cart-count">0</span>)</button>
+  <marquee behavior="linear" direction="left" id="offer">50% off on Holi select now your favourate design</marquee>
+
+    <div id="container">
+
+     
+                     <div class="respnsive1">
+
+                 
+
+
+
+                <div class="responsive">
+                    <div class="gallery">
+                  <a target="_blank" href="https://t3.ftcdn.net/jpg/08/66/30/30/240_F_866303093_NVmZkfWzUqY1MX4wqFMwieP5f2JZFSmO.jpg">
+                  <img src="https://t3.ftcdn.net/jpg/08/66/30/30/240_F_866303093_NVmZkfWzUqY1MX4wqFMwieP5f2JZFSmO.jpg" alt="Cinque Terre">
+                  </a>
+                 <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name', ₹60050)">Add to Cart</button></div>
+                 </div>
+                 </div>   
+
+                 <div class="responsive">
+                    <div class="gallery">
+                  <a target="_blank" href="https://t3.ftcdn.net/jpg/09/75/31/68/240_F_975316874_8SwvhylCbK5N2T8t6tyCjknNVjG1PZxO.jpg">
+                  <img src="https://t3.ftcdn.net/jpg/09/75/31/68/240_F_975316874_8SwvhylCbK5N2T8t6tyCjknNVjG1PZxO.jpg" alt="Cinque Terre">
+                  </a>
+                 <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name', ₹60050)">Add to Cart</button></div>
+                 </div>
+                 </div>
+
+
+
+
+
+                 <div class="responsive">
+                    <div class="gallery">
+                  <a target="_blank" href="https://t4.ftcdn.net/jpg/11/65/04/99/240_F_1165049935_D3tDVLfe8cPlovhjpcbGwh1DbeLWqylF.jpg">
+                  <img src="https://t4.ftcdn.net/jpg/11/65/04/99/240_F_1165049935_D3tDVLfe8cPlovhjpcbGwh1DbeLWqylF.jpg" alt="Cinque Terre">
+                  </a>
+                 <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name', ₹90050)">Add to Cart</button></div>
+                 </div>
+                 </div>
+
+
+                 <div class="responsive">
+                  <div class="gallery">
+                <a target="_blank" href="https://t4.ftcdn.net/jpg/09/30/04/35/240_F_930043501_ZVvAIEA5cMdtEcy0Z5yfBVCcoUUhW1bX.jpg">
+                <img src="https://t4.ftcdn.net/jpg/09/30/04/35/240_F_930043501_ZVvAIEA5cMdtEcy0Z5yfBVCcoUUhW1bX.jpg" alt="Cinque Terre">
+                </a>
+               <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name',₹10050)">Add to Cart</button></div>
+               </div>
+               </div>
+        
+
+
+                 <div class="responsive">
+                    <div class="gallery">
+                  <a target="_blank" href="https://t4.ftcdn.net/jpg/07/72/21/25/240_F_772212578_YOpztOMeQ7HZciIlnoXlYz5QvHUzSPkH.jpg">
+                  <img src="https://t4.ftcdn.net/jpg/07/72/21/25/240_F_772212578_YOpztOMeQ7HZciIlnoXlYz5QvHUzSPkH.jpg" alt="Cinque Terre">
+                  </a>
+                 <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name',₹ 50000)">Add to Cart</button></div>
+                 </div>
+                 </div>
+
+
+                 <div class="responsive">
+                  <div class="gallery">
+                <a target="_blank" href="https://t4.ftcdn.net/jpg/10/59/27/81/240_F_1059278129_la1DxQEAcbaT2RYD0BGgOZtskcoHnARO.jpg">
+                <img src="https://t4.ftcdn.net/jpg/10/59/27/81/240_F_1059278129_la1DxQEAcbaT2RYD0BGgOZtskcoHnARO.jpg" alt="Cinque Terre">
+                </a>
+               <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button></div>
+               </div>
+               </div>
+
+
+
+
+
+                 <div class="responsive">
+                    <div class="gallery">
+                  <a target="_blank" href="https://t3.ftcdn.net/jpg/06/25/59/46/240_F_625594612_vKtGRPm6wGPmtGiaahykEeuBjsDIW87q.jpg">
+                  <img src="https://t3.ftcdn.net/jpg/06/25/59/46/240_F_625594612_vKtGRPm6wGPmtGiaahykEeuBjsDIW87q.jpg" alt="Cinque Terre">
+                  </a>
+                 <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button></div>
+                 </div>
+                 </div>
+
+
+
+
+
+
+                 <div class="responsive">
+                    <div class="gallery">
+                  <a target="_blank" href="https://t3.ftcdn.net/jpg/10/43/97/44/240_F_1043974450_w3UJTB3vHHZSV5IjpwRWhrLoJDC5Ys3q.jpg">
+                  <img src="https://t3.ftcdn.net/jpg/10/43/97/44/240_F_1043974450_w3UJTB3vHHZSV5IjpwRWhrLoJDC5Ys3q.jpg" alt="Cinque Terre">
+                  </a>
+                 <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button></div>
+                 </div>
+                 </div>
+
+
+
+
+
+
+
+
+                 <div class="responsive">
+                    <div class="gallery">
+                  <a target="_blank" href="https://t4.ftcdn.net/jpg/08/03/94/93/240_F_803949314_SGVogcSzsjqUx5Gv1RoBg796TyctsQuW.jpg">
+                  <img src="https://t4.ftcdn.net/jpg/08/03/94/93/240_F_803949314_SGVogcSzsjqUx5Gv1RoBg796TyctsQuW.jpg" alt="Cinque Terre">
+                  </a>
+                 <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button></div>
+                 </div>
+                 </div>
+
+
+
+
+
+
+                 <div class="responsive">
+                    <div class="gallery">
+                  <a target="_blank" href="https://t3.ftcdn.net/jpg/09/40/32/70/240_F_940327013_NBIZs2TiTsWbq20cgKYjJUGjxwl5RpYn.jpg">
+                  <img src="https://t3.ftcdn.net/jpg/09/40/32/70/240_F_940327013_NBIZs2TiTsWbq20cgKYjJUGjxwl5RpYn.jpg" alt="Cinque Terre">
+                  </a>
+                 <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button></div>
+                 </div>
+                 </div>
+
+
+
+                 <div class="responsive">
+                  <div class="gallery">
+                <a target="_blank" href="https://t4.ftcdn.net/jpg/10/42/38/27/240_F_1042382712_ccGxcpZor7b6L50tqTWjY6o5RyXlvz4i.jpg">
+                <img src="https://t4.ftcdn.net/jpg/10/42/38/27/240_F_1042382712_ccGxcpZor7b6L50tqTWjY6o5RyXlvz4i.jpg" alt="Cinque Terre">
+                </a>
+               <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button></div>
+               </div>
+               </div>
+
+
+               
+               <div class="responsive">
+                <div class="gallery">
+              <a target="_blank" href="https://t4.ftcdn.net/jpg/09/32/68/91/240_F_932689151_za6U7H9KrHwq1M3TEioEe00LjgNCVsRn.jpg">
+              <img src="https://t4.ftcdn.net/jpg/09/32/68/91/240_F_932689151_za6U7H9KrHwq1M3TEioEe00LjgNCVsRn.jpg" alt="Cinque Terre">
+              </a>
+             <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button></div>
+             </div>
+             </div>
+
+
+
+             
+             <div class="responsive">
+              <div class="gallery">
+            <a target="_blank" href="https://t4.ftcdn.net/jpg/08/83/41/07/240_F_883410752_DSiskdJeuHXcV3ZHNEcamMX64Wc3K2Nf.jpg">
+            <img src="https://t4.ftcdn.net/jpg/08/83/41/07/240_F_883410752_DSiskdJeuHXcV3ZHNEcamMX64Wc3K2Nf.jpg" alt="Cinque Terre">
+            </a>
+           <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button></div>
+           </div>
+           </div>
+
+
+
+           
+           <div class="responsive">
+            <div class="gallery">
+          <a target="_blank" href="https://t3.ftcdn.net/jpg/09/71/39/36/240_F_971393688_qpvOR9q4nV9ang56goPEhSuX2HK8HEC4.jpg">
+          <img src="https://t3.ftcdn.net/jpg/09/71/39/36/240_F_971393688_qpvOR9q4nV9ang56goPEhSuX2HK8HEC4.jpg" alt="Cinque Terre">
+          </a>
+         <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button></div>
+         </div>
+         </div>
+
+
+
+         
+         <div class="responsive">
+          <div class="gallery">
+        <a target="_blank" href="https://t4.ftcdn.net/jpg/09/30/04/35/240_F_930043501_ZVvAIEA5cMdtEcy0Z5yfBVCcoUUhW1bX.jpg">
+        <img src="https://t4.ftcdn.net/jpg/09/30/04/35/240_F_930043501_ZVvAIEA5cMdtEcy0Z5yfBVCcoUUhW1bX.jpg" alt="Cinque Terre">
+        </a>
+       <div class="desc"><p></p><button class="add-to-cart" onclick="addToCart('Product Name', ₹56750)">Add to Cart</button></div>
+       </div>
+       </div>
+
+
+
+      
+            
+
+
+
+
+
+  <!-- js-work for card -->
+        <!-- Cart Modal -->
+        <div id="cart-modal" class="cart-modal">
+          <div class="cart-content">
+              <h2>Your Cart</h2>
+              <ul id="cart-items"></ul>
+              <p><strong>Total: ₹<span id="total-amount">0</span></strong></p>
+              <button onclick="clearCart()">Clear Cart</button>
+              <button onclick="checkout()">Proceed to Checkout</button>
+              <button onclick="closeCart()">Close</button>
+          </div>
+      </div>
+    
+      <!-- Checkout Modal -->
+      <div id="checkout-modal" class="checkout-modal">
+          <div class="checkout-content">
+              <h2>Checkout</h2>
+              <p><strong>Total Amount: ₹<span id="checkout-total">0</span></strong></p>
+              <form id="checkout-form">
+                  <label for="name">Full Name:</label>
+                  <input type="text" id="name" placeholder="Enter your name" required><br>
+                  <label for="address">Address:</label>
+                  <input type="text" id="address" placeholder="Enter your address" required><br>
+                  <button type="submit">Submit Order</button>
+              </form>
+              <button onclick="closeCheckout()">Close</button>
+          </div>
+      </div>
+    
+      <script src="/static/script1.js"></script>   
+             
+  </div>
+  </div>
+</body>
+</html>

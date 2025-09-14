@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design Magazine</title>
+    <link rel="stylesheet" href="/static/magzine.css">
+</head>
+<body>
+    <header>
+        <h1>Interior Design Magazine</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url "home" %}">Home</a></li>
+                <li><a href="{% url "about" %}">About</a></li>
+                <li><a href="{% url "furniture" %}">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h2>Transform Your Space with Style</h2>
+            <p>Explore the latest trends in interior design, from modern aesthetics to classic decor.</p>
+        </div>
+    </section>
+
+    <section id="articles">
+        <h2>Featured Articles</h2>
+        <div class="article-container">
+            <div class="article">
+                <img src="https://media.istockphoto.com/id/1305591871/photo/modern-interior-design-of-upholstered-furniture-against-the-background-of-a-classic-wall.jpg?s=612x612&w=0&k=20&c=HEQyKTjllZ7pG29PiltU7HLps0IPNhsFp1ntQlScMYA=" alt="Living Room Design">
+                <h3>Modern Living Room Designs</h3>
+                <p>Discover how to create a stylish and cozy living room that fits your lifestyle.</p>
+                <a href="{% url "living" %}">Read More</a>
+            </div>
+            <div class="article">
+                <img src="https://images.livspace-cdn.com/w:1080/plain/https://d3gq2merok8n5r.cloudfront.net/abhinav/2properties-1733457217-X1TuH/photoshoots-1735452784-CzJzx/delhi-1735818163-51LCH/supertech-capetown-1735891017-SsAcC/ki-sc-1-1735891205-Wg3eZ.jpg" alt="Kitchen Ideas">
+                <h3>Kitchen Makeovers</h3>
+                <p>Transform your kitchen with these trendy design tips and ideas.</p>
+                <a href="{% url "kichen" %}">Read More</a>
+            </div>
+            <div class="article">
+                <img src="https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/gallery/bedroom/vibrant-kids-bedroom-with-twin-beds-and-wooden-dresser/children-bedroom-design.jpg.transform/bh-gallery-listing/image.webp" alt="Bedroom Inspiration">
+                <h3>Cozy Bedroom Inspirations</h3>
+                <p>Turn your bedroom into a peaceful sanctuary with these design tips.</p>
+                <a href="{% url "bedroom" %}">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Interior Design 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Interior Design 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Interior Design 3">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Interior Design Magazine. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/magzine.js"></script>
+</body>
+</html>

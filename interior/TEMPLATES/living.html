@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Living Room Design</title>
+    <style>
+        /* Basic reset */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+        }
+
+        header .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Intro Section */
+        .intro {
+            background-color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .intro h2 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Living Room Gallery */
+        .living-room-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item h3 {
+            padding: 10px;
+            font-size: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        .gallery-item p {
+            padding: 10px;
+            font-size: 16px;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .living-room-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .living-room-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Modern Living Room Design</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url "home" %}"><button class="home-button">🏠</button></a></li>
+                <li><a href="{% url "furniture" %}">Designs</a></li>
+                <li><a href="{% url "about" %}">About Us</a></li>
+                <li><a href="{% url "contact" %}">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="intro">
+    <div class="container">
+        <h2>Transform your space with modern elegance</h2>
+        <p>Explore stylish living room designs that combine comfort with contemporary aesthetics.</p>
+    </div>
+</section>
+
+<section class="living-room-gallery">
+    <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Modern Living Room 1">
+        <h3>Luxury Modern Living Room</h3>
+        <p>Contemporary style with minimalist design and cozy furnishings.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Modern Living Room 2">
+        <h3>Sleek Urban Living Room</h3>
+        <p>Perfect blend of urban design and comfort for a stylish space.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://media.istockphoto.com/id/1421025726/photo/interior-with-red-sofa-stone-wall-panel-backlight-and-decor-3d-render-illustration-mockup.jpg?s=612x612&w=0&k=20&c=ClFzuDNNVmim4NZBcC8Cp2ovPhDG1Sl7Lhp9ghYFuBU=" alt="Modern Living Room 3">
+        <h3>Open Concept Living Area</h3>
+        <p>Light-filled open layout with chic modern furniture.</p>
+    </div>
+
+
+
+    <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGxpdmluZyUyMHJvb20lMjBpbnRlcmlvciUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D" alt="Modern Living Room 1">
+        <h3>Luxury Modern Living Room</h3>
+        <p>Contemporary style with minimalist design and cozy furnishings.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://media.istockphoto.com/id/1402815976/photo/interior-with-wall-panel-armchair-backlight-and-decor-3d-render-illustration-mockup.jpg?s=612x612&w=0&k=20&c=omDDc4dlKzWAPBC4NdvBQiUrZZB4TtI1cnZ3ATILUuY=" alt="Modern Living Room 2">
+        <h3>Sleek Urban Living Room</h3>
+        <p>Perfect blend of urban design and comfort for a stylish space.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://media.istockphoto.com/id/2128415430/photo/modern-living-room-interior.jpg?s=612x612&w=0&k=20&c=edhorew15gUfsbxpVxO8tkTifpQHl0JjSX-pts7DEOI=" alt="Modern Living Room 3">
+        <h3>Open Concept Living Area</h3>
+        <p>Light-filled open layout with chic modern furniture.</p>
+    </div>
+
+
+
+
+
+    <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGl2aW5nJTIwcm9vbSUyMGludGVyaW9yJTIwZGVzaWdufGVufDB8fDB8fHww" alt="Modern Living Room 1">
+        <h3>Luxury Modern Living Room</h3>
+        <p>Contemporary style with minimalist design and cozy furnishings.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://plus.unsplash.com/premium_photo-1678474801614-188124d2b4ee?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bGl2aW5nJTIwcm9vbSUyMGludGVyaW9yJTIwZGVzaWdufGVufDB8fDB8fHww" alt="Modern Living Room 2">
+        <h3>Sleek Urban Living Room</h3>
+        <p>Perfect blend of urban design and comfort for a stylish space.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGxpdmluZyUyMHJvb20lMjBpbnRlcmlvciUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D" alt="Modern Living Room 3">
+        <h3>Open Concept Living Area</h3>
+        <p>Ligh
+        </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Modern Interior Design. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    console.log("Modern Living Room Page Loaded!");
+</script>
+
+</body>
+</html>

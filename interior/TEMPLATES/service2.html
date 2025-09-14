@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design Services</title>
+    <link rel="stylesheet" href="/static/styles6.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Interior Design Services</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url "home" %}"><button class="home-button">🏠</button></a></li>
+                    <li><a href="{% url "about" %}">About Us</a></li>
+                    <li><a href="{% url "service" %}">Services</a></li>
+                    <li><a href="">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Transform Your Space with Our Expertise</h2>
+            <p>We create beautiful, functional, and inspiring interiors tailored to your style.</p>
+            <button onclick="getInTouch()">Get In Touch</button>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <img src="images/residential-design.jpg" alt="Residential Design" />
+                <h3>Residential Design</h3>
+                <p>We design comfortable and aesthetic living spaces that reflect your personality.</p>
+            </div>
+            <div class="service">
+                <img src="images/commercial-design.jpg" alt="Commercial Design" />
+                <h3>Commercial Design</h3>
+                <p>Creating functional and stylish office spaces that enhance productivity and creativity.</p>
+            </div>
+            <div class="service">
+                <img src="images/consultation.jpg" alt="Consultation" />
+                <h3>Consultation</h3>
+                <p>Our expert designers will work with you to make your space shine with minimal effort.</p>
+            </div>
+            <div class="service">
+                <img src="images/furniture-design.jpg" alt="Furniture Design" />
+                <h3>Furniture Design</h3>
+                <p>We create bespoke, custom furniture that fits perfectly into your unique space and style.</p>
+            </div>
+            <div class="service">
+                <img src="images/3d-visualization.jpg" alt="3D Visualization" />
+                <h3>3D Visualizations</h3>
+                <p>We provide realistic 3D models to help you visualize your future space before making any changes.</p>
+            </div>
+            <div class="service">
+                <img src="images/dream-home.jpg" alt="Dream Home Design" />
+                <h3>Designing My Dream Home</h3>
+                <p>Collaborate with our experts to design your dream home, tailored to your needs and desires.</p>
+            </div>
+            <div class="service">
+                <img src="images/project-management.jpg" alt="Managing My Home Project" />
+                <h3>Managing My Home Project</h3>
+                <p>We offer project management services to ensure your home renovation or design stays on track and within budget.</p>
+            </div>
+            <div class="service">
+                <img src="images/delivery-installation.jpg" alt="Delivery and Installation" />
+                <h3>Delivery and Installation</h3>
+                <p>We take care of the delivery and installation of furniture and home decor so that your space is ready to move into.</p>
+            </div>
+            <div class="service">
+                <img src="images/payment-method.jpg" alt="Paying for Home Interior" />
+                <h3>Paying for Home Interior</h3>
+                <p>We offer flexible payment methods for your home interior project, including installments and various payment options.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="general">
+        <div class="container">
+            <h2>General Terms and Conditions</h2>
+            <p>Our services are governed by clear terms and conditions. Please review our <a href="#">General Terms</a> before proceeding.</p>
+        </div>
+    </section>
+
+    <section id="definition">
+        <div class="container">
+            <h2>Definition and Interpretation</h2>
+            <p>We provide clear definitions of design terms and interpretation guidelines to ensure your design is as expected.</p>
+        </div>
+    </section>
+
+    <section id="eligibility">
+        <div class="container">
+            <h2>Eligibility to Use Our Services</h2>
+            <p>Anyone who wishes to improve their living or working space and is looking for professional design services is eligible to use our services.</p>
+        </div>
+    </section>
+
+    <section id="account-registration">
+        <div class="container">
+            <h2>Account Registration</h2>
+            <p>Sign up for an account to get personalized design recommendations and updates on your project status.</p>
+            <form id="registration-form" method="post" action="{% url 'register' %}">
+                {% csrf_token %}
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required name="name">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email"  required name="email">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password"  required name="password">
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="payment-methods">
+        <div class="container">
+            <h2>Our Payment Methods</h2>
+            <p>We offer flexible payment options to make the process easier for you:</p>
+            <ul>
+                <li>Credit/Debit Cards (Visa, MasterCard, American Express)</li>
+                <li>Bank Transfers</li>
+                <li>PayPal</li>
+                <li>Cash on Delivery (for local clients)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial">
+                <p>"The design team transformed my home into a cozy, modern space. Highly recommend!"</p>
+                <span>- Sarah T.</span>
+            </div>
+            <div class="testimonial">
+                <p>"Professional, creative, and exactly what we needed for our office redesign."</p>
+                <span>- John D.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback">
+        <div class="container">
+            <h2>Feedback</h2>
+            <p>We value your feedback. Please let us know about your experience with our services:</p>
+            <form id="feedback-form" method="post" action="{% url 'feedback' %}" role="form">
+               {% csrf_token %}
+                <div>
+                    <label for="feedback-name">Name:</label>
+                    <input type="text" id="feedback-name" name="name"  required>
+                </div>
+                <div>
+                    <label for="feedback-email">Email:</label>
+                    <input type="email" id="feedback-email"  required    name="email">
+                </div>
+                <div>
+                    <label for="feedback-message">Feedback:</label>
+                    <textarea id="feedback-message" name="feed" required type="text"></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Interior Design. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/static/script6.js"></script>
+</body>
+</html>

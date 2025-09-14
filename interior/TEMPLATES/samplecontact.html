@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AR Architect</title>
+    <link rel="stylesheet" href="/static/samplecontact.css">
+    <!-- Include Google Maps API (replace YOUR_GOOGLE_MAPS_API_KEY with your actual API key) -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Contact AR Architect</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}"><button class="home-button">🏠</button></a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- action="thankyou.html" -->
+    <!-- onsubmit="return handleFormSubmit()" -->
+    <section class="contact-form">
+        <h2>Get in Touch</h2>
+        <form id="contact-form"  method="POST" action="{% url 'contactinfo' %}">
+         {%  csrf_token   %}
+            <label for="name">Full Name</label>
+            <input type="text" id="name"  required placeholder="Your Full Name" name="name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email"  required placeholder="Your Email Address" name="email">
+
+            <label for="message">Message</label>
+            <textarea id="message"  required placeholder="Your Message..." name="text"></textarea>
+
+            <button type="submit" id="submit-btn" href="">Send Message</button>
+        </form>
+    </section>
+
+    <section id="map">
+        <div class="contact-inform">
+        <h1>Our Location</h1><br><br>
+        <h2>Visit us....</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAP_EMBED_URL" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 AR Architect. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/samplecontact.js"></script>
+</body>
+</html>

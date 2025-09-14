@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Interior Design</title>
+     
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .message-box h1 {
+            color: #2a9d8f;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .message-box p {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        button {
+            background-color: #2a9d8f;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #21867a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message-box">
+            <h1>Thank You for Your Booking!</h1>
+            <p>Your request has been received. Our team will get in touch with you shortly to discuss the details.</p>
+            <button id="backBtn">Go Back to Homepage</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle the redirection to the homepage
+        function goToHomepage() {
+            // Replace with your actual homepage URL
+            window.location.href = 'header.html'; // Assuming your homepage is 'index.html'
+        }
+
+        // Adding event listener to the "Go Back to Homepage" button
+        document.getElementById('backBtn').addEventListener('click', goToHomepage);
+    </script>
+</body>
+</html>

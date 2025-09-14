@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <a href="sampleadd.html"></a>
+    <style>
+        * {box-sizing: border-box;}
+        .container{
+          
+          width: 100vw;
+          height: 100vh;
+        }
+        body { 
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .header {
+         
+          overflow: hidden;
+          background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+          /* background-color:rgb(243, 128, 147); */
+          padding: 20px 10px;
+        }
+        
+        .header a {
+          float: left;
+          color: black;
+          text-align: center;
+          padding: 12px;
+          text-decoration: none;
+          font-size: 18px; 
+          line-height: 25px;
+          border-radius: 4px;
+        }
+        
+        .header a.logo {
+          font-size: 25px;
+          font-weight: bold;
+        }
+        
+        .header a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .header a.active {
+          background-color: dodgerblue;
+          color: white;
+          
+        }
+
+       
+          
+
+        .header-right1 {
+            gap: 2rem;
+            float: right;
+            margin-top: 4rem;
+          }
+        
+        @media screen and (max-width: 500px) {
+          .header a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+        }
+          .header-right {
+            float: none;
+          }
+          .header-right {
+            float: right;
+          }
+          #FURNITURE{
+            color: rgb(255, 244, 244);
+            gap:3rem;
+            margin-top: 1REM;
+          }
+
+
+
+
+          div.gallery {
+            border: 1px solid #ccc;
+          }
+          
+          div.gallery:hover {
+            border: 1px solid #777;
+          }
+          
+          div.gallery img {
+            width: 100%;
+            height: auto;
+          }
+          
+          div.desc {
+            padding: 15px;
+            text-align: center;
+          }
+          
+          * {
+            box-sizing: border-box;
+          }
+          .respnsive1{
+           
+            height: 100%;
+            width: 100%;
+          }
+          .responsive {
+
+            padding: 0 6px;
+            float: left;
+            margin-top: 2rem;
+            width: 24.99999%;
+          }
+          
+          @media only screen and (max-width: 700px) {
+            .responsive {
+              width: 49.99999%;
+              margin: 6px 0;
+            }
+          }
+          
+          @media only screen and (max-width: 500px) {
+            .responsive {
+              width: 100%;
+            }
+          }
+          
+          .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+        #off{
+          position: sticky;
+          /* position: fixed; */
+          font-size: larger;
+          color: red;
+          font-weight: bolder;
+          font-style: italic;
+        }
+
+        
+.footer-container{
+  background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+  margin-top: 5rem;
+  /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+  /* background-color: transparent; */
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  /* max-width: 1280px; */
+  width: 100%;
+  }
+.footer{
+  
+  margin-top: 5rem;
+  max-width: 1280px;
+  padding: 1rem 2.4rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+
+}
+.footer-top{
+     width: 34%;
+     display: flex;
+     flex-direction: column;
+     gap:2rem;
+}
+.logo-image{
+  width: 2rem;
+  height:1.5rem ;
+}
+.social-icon{
+
+   width: 1.5rem;
+   height: 1.5rem;
+}
+.logo-link{
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  gap:0.5rem;
+  color: black;
+}
+.comp-logo{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-bottom: -1.6rem;
+  gap: 1.2em;
+}
+.text{
+     font-size: 1rem;
+     color: #777;
+     gap:1rem;
+}
+.footer-grid{
+   display: grid;
+   grid-template-columns: repeat(4,1fr) ;
+   grid-gap:5.67rem;
+
+   /* padding: 2rem 0.4rem; */
+}
+.footer-grid-heading{
+   font-size: 1.05rem;
+   font-weight: bold;
+   color: var(--text-color);
+}
+ul{
+  list-style-type: none;
+}
+.footer-link{
+       color: #777;
+       font-size: 0.875rem;
+}
+
+.footer-link-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.footer-grid-heading{
+   margin-bottom: 1.65rem;
+}
+.social{
+  display: flex;
+  gap:0.8rem;
+}
+.footer-copyright{
+  /* color: gray;
+  font-size: 0.75rem;
+  padding-bottom: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7e8; */
+  background-image: linear-gradient(to top, #ffddf5 0%, #a6c1ee 100%);
+  color: rgb(58, 54, 54);
+  /* align-items: center;
+  justify-content: center; */
+  /* align-self: center; */
+  align-items: center;
+  font-size: 1rem;
+  padding-bottom: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid #e5e7e8;
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: rgb(11, 5, 5);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer-link-list li :hover
+{
+color:#008cba
+}
+
+@media screen and (max-width:1080px) {
+  .footer{
+     flex-direction: column;
+     align-items: center;
+     
+  }
+  .footer-top{
+     padding: 9rem;
+  }
+  .footer-grid{
+             align-self: center;
+             justify-content: space-evenly;
+  }
+
+
+}
+@media screen and (max-width:840px){
+  .footer-top{
+     padding-left: 1rem;
+  }
+  .footer-grid{
+     grid-template-columns: repeat(2,1fr);
+  }
+}
+.logo span{
+  color: rgb(239, 162, 45);
+}
+    </style>
+</head>
+<body>
+   <div class="container">
+<div class="header">
+   <!-- <marquee behavior="linear" direction="left" id="off">20% off on any furniture designs </marquee> -->
+    <a href="#default" class="logo">A.R architect</a>
+    <a href="#default" class="logo" ID="FURNITURE">FUR<span>NI</span>TU<span>RE</span>
+       </a>
+    <div class="header-right">
+      <a class="active" href="{% url "home" %}"><button class="home-button">🏠</button></a>
+      <a href="{% url "contact" %}">Contact</a>
+      <a href="{% url "about" %}">About</a>
+      <!-- cardbutton -->
+      <!-- <button class="cart-button" onclick="viewCart()">View Cart (<span id="cart-count">0</span>)</button> -->
+    </div>
+
+    <div class="header-right1">
+        <a class="active" href="{% url 'chairs' %}">Chairs</a>
+        <a  href="{% url 'table' %}">Table</a>
+        <a  href="{% url 'sofa' %}">Sofa designs</a>
+        <a href="{% url 'curtain' %}">Curtains</a>
+        <a  href="{% url 'door' %}">Doors designs</a>
+        <a  href="{% url 'dow' %}">Windows designs</a>
+        <a  href="#">Dinner tables</a>
+        <a  href="#">Tea tables</a>
+        <a href="{% url "bed" %}">Beds design</a>
+      </div>
+  </div>
+
+  <!-- galery -->
+   <div class="respnsive1">
+    <marquee behavior="linear" direction="left" id="off">20% off on any furniture designs </marquee>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://e7.pngegg.com/pngimages/878/13/png-clipart-chair-furniture-couch-chair-armrest-wood-thumbnail.png">
+        <img src="https://e7.pngegg.com/pngimages/878/13/png-clipart-chair-furniture-couch-chair-armrest-wood-thumbnail.png" alt="Cinque Terre">
+      </a>
+      <div class="desc"></div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://atlas-content-cdn.pixelsquid.com/assets_v2/290/2908263571844502977/previews/G03-200x200.jpg">
+        <img src="https://atlas-content-cdn.pixelsquid.com/assets_v2/290/2908263571844502977/previews/G03-200x200.jpg" alt="Forest">
+      </a>
+      <div class="desc">Tables</div>
+      <!-- <button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button> -->
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://cdn.pixabay.com/photo/2023/12/31/15/42/living-room-8480223_640.jpg">
+        <img src="https://cdn.pixabay.com/photo/2023/12/31/15/42/living-room-8480223_640.jpg" alt="Northern Lights">
+      </a>
+      <div class="desc">Sofa-designs</div>
+      <!-- <button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button> -->
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://images.unsplash.com/photo-1455637766568-d1387e1c2090?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3VydGFpbnN8ZW58MHx8MHx8fDA%3D">
+        <img src="https://images.pexels.com/photos/2920855/pexels-photo-2920855.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mountains">
+      </a>
+      <div class="desc">Curtains</div>
+      <!-- <button class="add-to-cart" onclick="addToCart('Product Name', 50)">Add to Cart</button> -->
+    </div>
+  </div>
+<br>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://cdn.pixabay.com/photo/2015/12/23/18/52/door-1106012_640.jpg">
+        <img src="https://images.pexels.com/photos/3723719/pexels-photo-3723719.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mountains">
+      </a>
+      <div class="desc">Doors</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://cdn.pixabay.com/photo/2019/11/06/12/04/window-4605938_640.jpg">
+        <img src="https://images.pexels.com/photos/5932411/pexels-photo-5932411.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mountains">
+      </a>
+      <div class="desc">Windows</div>
+    </div>
+  </div>
+
+
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://cdn.pixabay.com/photo/2019/11/06/12/04/window-4605938_640.jpg">
+        <img src="https://images.pexels.com/photos/3144581/pexels-photo-3144581.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mountains">
+      </a>
+      <div class="desc">Dinner-Dinning tables</div>
+    </div>
+  </div>
+
+
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://images.pexels.com/photos/8952615/pexels-photo-8952615.jpeg?auto=compress&cs=tinysrgb&w=600">
+        <img src="https://images.pexels.com/photos/8952615/pexels-photo-8952615.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mountains">
+      </a>
+      <div class="desc">Tea-tables</div>
+    </div>
+  </div>
+  
+
+
+  
+  <!-- <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://images.pexels.com/photos/6684174/pexels-photo-6684174.jpeg?auto=compress&cs=tinysrgb&w=600">
+        <img src="https://images.pexels.com/photos/6684174/pexels-photo-6684174.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mountains" width="1000px">
+      </a>
+      <div class="desc">Beds-designs</div>
+    </div>
+  </div> -->
+
+
+  <!-- footer -->
+<div class="footer-container">
+  <footer class="footer">
+        <div class="footer-top">
+               <div class="comp-logo">
+                      <a class="logo-link" href="#">
+                              <img class="logo-image" src="/static/images/23.jpg">
+                              A.R architect
+                  </a>
+                      <p class="text"></p>
+                      <div class="social">
+                             <a class="social-link">
+                                  <img src="\static\google (1).png" alt="google" class="social-icon">
+                             </a>
+
+                             <a class="social-link">
+                              <img src="\static\instagram_2111463.png" alt="micro" class="social-icon">
+                         </a>
+
+                         <a class="social-link">
+                           <img src="\static\telegram_2111646.png" alt="linkdin" class="social-icon">
+                          </a>
+
+                      <a class="social-link">
+                        <img src="/static/youtube (1).png" alt="youtube" class="social-icon">
+                         </a>
+
+                      </div>
+                     </div>
+        </div>
+       <div class="footer-grid">
+                    <!-- coloun1 -->
+             <div class="footer-grid-column">
+                      <div class="footer-grid-heading">
+                           Products
+                      </div>
+                      <ul class="footer-link-list">
+                          <li>
+                             <a href="{% url "furniture" %}" class="footer-link">Furniture</a>
+                          </li>
+
+                          <li>
+                           <a href="{% url "pillow" %}" class="footer-link">Decore & pillows</a>
+                        </li>
+
+                        <li>
+                           <a href="#overview" class="footer-link">Rugs</a>
+                        </li>
+
+                        <li>
+                           <a href="{% url "light" %}" class="footer-link">Lighting</a>
+                        </li>
+
+                        <li>
+                          <a href="#overview" class="footer-link">Outdoor</a>
+                       </li>
+                      </ul>
+            </div>
+                    <!-- coloun2 -->
+               <div class="footer-grid-column">
+                           <div class="footer-grid-heading">
+                                Products
+                           </div>
+                           <ul class="footer-link-list">
+                               <li>
+                                  <a href="{% url "service" %}" class="footer-link">terms of condition</a>
+                               </li>
+  
+                               <li>
+                                <a href="#overview" class="footer-link">cookie settings</a>
+                             </li>
+  
+                             <li>
+                                <a href="{% url "service" %}" class="footer-link">policy</a>
+                             </li>
+  
+                             <li>
+                                <a href="{% url "layout" %}" class="footer-link">Overview</a>
+                             </li>
+                             <li>
+                              <a href="#overview" class="footer-link">press</a>
+                           </li>
+                           <li>
+                              <a href="#overview" class="footer-link">blog</a>
+                           </li>
+                           </ul>
+                </div>
+                     
+                   <!-- coloun3 -->
+               <div class="footer-grid-column">
+                           <div class="footer-grid-heading">
+                                services
+                           </div>
+                           <ul class="footer-link-list">
+                               <li>
+                                  <a href="{% url "about" %}" class="footer-link">About</a>
+                               </li>
+  
+                               <li>
+                                <a href="{% url "contact" %}" class="footer-link">Contact</a>
+                             </li>
+  
+                             <li>
+                                <a href="{% url "loginview" %}" class="footer-link">login</a>
+                             </li>
+  
+                             <li>
+                                <a href="{% url "layout" %}" class="footer-link">layout</a>
+                             </li>
+                           </ul>
+                </div>
+                   
+                  <!-- coloun4 -->
+                <div class="footer-grid-column">
+                     <div class="footer-grid-heading">
+                          overview
+                     </div>
+                     <ul class="footer-link-list">
+                      <li>
+                        <a href="{% url "furniture" %}" class="footer-link">Furniture</a>
+                     </li>
+
+                     <li>
+                      <a href="{% url "pillow" %}" class="footer-link">Decore & pillows</a>
+                   </li>
+
+                   <li>
+                      <a href="#overview" class="footer-link">Rugs</a>
+                   </li>
+
+                   <li>
+                      <a href="{% url "light" %}" class="footer-link">Lighting</a>
+                   </li>
+
+                   <li>
+                     <a href="#overview" class="footer-link">Outdoor</a>
+                  </li>
+                  <li>
+                    <a href="{% url "about" %}" class="footer-link">About</a>
+                 </li>
+
+                 <li>
+                  <a href="{% url "contact" %}" class="footer-link">Contact</a>
+               </li>
+
+               <li>
+                  <a href="{% url "loginview" %}" class="footer-link">login</a>
+               </li>
+
+               <li>
+                  <a href="{% url "layout" %}" class="footer-link">layout</a>
+               </li>
+                       
+                     </ul>
+                </div>   
+       </div>
+  </footer>
+  <div class="footer-copyright">
+        @2021 -present A.R architect. All rigts reserved.
+  </div>
+
+
+
+       
+ 
+  
+</div>
+</body>
+</html>

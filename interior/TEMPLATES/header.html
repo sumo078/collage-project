@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+  *{
+  padding: 0;
+  margin: 0;
+}
+body{
+display: flex;
+flex-direction: column;
+background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+
+ padding: o.3rem;
+}
+/* header-section */
+.header{
+
+/* margin-top: 3rem; */
+margin: 1.5rem;
+margin-left: 5rem;
+margin-right: 5rem;
+}
+.header-content{
+  margin: 3rem;
+  background: url("");
+  justify-content: space-between;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+.logo{
+ display: flex;
+ font-size: 2rem;
+ font-weight: bold;
+ color: var(--text-color);
+ text-decoration: none;
+ gap:0.625;
+}
+.arow{
+  height: 5rem;
+  width: 5rem;
+}
+.nav{
+  gap:1.5rem;
+  
+   }
+  @media screen and (min-width:768px){
+   .nav{
+      display: flex;
+   }
+  }
+  nav :hover{
+      color: blue;
+  }
+  .navlink{
+      
+      text-decoration: none;
+      color: #718096;
+      font-size: 1.125;
+      font-weight: 600;
+      transform: color 0.1s;
+  }
+.navlink1{
+  text-decoration: none;
+      color: #e31310;
+      font-size: 1.125;
+      font-weight: 600;
+      transform: color 0.1s;
+}
+  .navlink :hover{
+      color: blue;
+  }
+/* dropdown */
+
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+.dropdown .dropbtn {
+font-size: 16px;  
+border: none;
+outline: none;
+color: #718096;;
+background-color: inherit;
+margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+background-color: red;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+width: 100%;
+/* height: 60%; */
+left: 0;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content .header {
+background: red;
+padding: 16px;
+color: white;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+float: left;
+width: 33.33%;
+padding: 10px;
+background-color: #ccc;
+height: 400px;
+}
+
+.column a {
+float: none;
+color: black;
+padding: 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.column a:hover {
+background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.column {
+  width: 100%;
+  height: auto;
+}
+}
+
+/* ghgkkhjkhk */
+  /* .contact-button{
+      text-decoration: none;
+      height: 1.5rem;
+      margin: 0%;
+      display: none;
+      border: none;
+      border-radius: 0.375rem;
+      background-color: rgb(113, 113, 191);
+      color: white;
+      transform: all 0.1s;
+      padding:0.5rem ;
+      font-size:1rem;
+      font-weight:600;
+
+      
+      }
+      @media screen and (min-width:768px){
+      .contact-button{
+       display: block;
+      }
+  }
+  .contact-button:hover{
+      background-color: #161878;
+} */
+/* sidebar */
+/* #menu{
+background-color: #f2f2f2;
+}
+#menu:hover{
+background-color: #444; 
+} */
+#bar{
+width: 100%;
+transition: 0.10s;
+background-color:transparent;
+}
+#bar:hover{
+background-color:rgb(47, 43, 43);
+}
+.sidebar {
+  /* display:none; */
+  /* position: absolute; */
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color:black;
+  overflow-x: hidden;
+  transition: 2.0s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 15px;
+  cursor: pointer;
+  background-color:black;
+  color: white;
+  padding: 2px 4px;
+  border: none;
+}
+
+.openbtn:hover {
+  /* cursor: auto; */
+
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/* image-gallery*/
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* slidbar */
+/* Slideshow container */
+.slideshow-container {
+max-width: 600px;
+position: relative;
+margin: auto;
+margin-top: 3rem;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s linear;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+/* footer */
+.footer-container{
+background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+margin-top: 5rem;
+/* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+/* background-color: transparent; */
+margin: 0 auto;
+padding: 0 2rem;
+display: flex;
+flex-direction: column;
+/* max-width: 1280px; */
+width: 100%;
+}
+.footer{
+margin-top: 5rem;
+max-width: 1280px;
+padding: 1rem 2.4rem;
+text-align: left;
+display: flex;
+justify-content: space-between;
+
+
+}
+.footer-top{
+   width: 34%;
+   display: flex;
+   flex-direction: column;
+   gap:2rem;
+}
+.logo-image{
+width: 2rem;
+height:1.5rem ;
+}
+.social-icon{
+
+ width: 1.5rem;
+ height: 1.5rem;
+}
+.logo-link{
+display: flex;
+justify-content: flex-start;
+align-items:center;
+font-size: 1.2rem;
+font-weight: bold;
+gap:0.5rem;
+color: black;
+}
+.comp-logo{
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+margin-bottom: -1.6rem;
+gap: 1.2em;
+}
+.text{
+   font-size: 1rem;
+   color: #777;
+   gap:1rem;
+}
+.footer-grid{
+ display: grid;
+ grid-template-columns: repeat(4,1fr) ;
+ grid-gap:5.67rem;
+
+ /* padding: 2rem 0.4rem; */
+}
+.footer-grid-heading{
+ font-size: 1.05rem;
+ font-weight: bold;
+ color: var(--text-color);
+}
+ul{
+list-style-type: none;
+}
+.footer-link{
+     color: #777;
+     font-size: 0.875rem;
+}
+
+.footer-link-list{
+display: flex;
+flex-direction: column;
+gap: 1.2rem;
+}
+.footer-grid-heading{
+ margin-bottom: 1.65rem;
+}
+.footer-link-list li :hover
+{
+color:#008cba
+}
+.social{
+display: flex;
+gap:0.8rem;
+}
+.footer-copyright{
+background-image: linear-gradient(to top, #ffddf5 0%, #a6c1ee 100%);
+color: rgb(58, 54, 54);
+/* align-items: center;
+justify-content: center; */
+/* align-self: center; */
+align-items: center;
+font-size: 1rem;
+padding-bottom: 2rem;
+margin-top: 1.5rem;
+padding-top: 1rem;
+border-top: 2px solid #e5e7e8;
+text-align: center;
+padding: 10px;
+background-color: #333;
+color: rgb(11, 5, 5);
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+
+@media screen and (max-width:1080px) {
+.footer{
+   flex-direction: column;
+   align-items: center;
+   
+}
+.footer-top{
+   padding: 9rem;
+}
+.footer-grid{
+           align-self: center;
+           justify-content: space-evenly;
+}
+
+
+}
+@media screen and (max-width:840px){
+.footer-top{
+   padding-left: 1rem;
+}
+.footer-grid{
+   grid-template-columns: repeat(2,1fr);
+}
+}
+
+
+
+/* qna section */
+.container1 {
+margin-top: 4rem;
+margin-left: 8rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 20px;
+max-width: 1280px;
+width: 90%;
+/* max-width: 600px; */
+}
+
+h1 {
+text-align: center;
+margin-bottom: 20px;
+font-size: 28px;
+}
+
+.qa-section {
+display: flex;
+flex-direction: column;
+}
+
+.qa-item {
+margin-bottom: 15px;
+}
+
+.qa-question {
+background-color: #008cba;
+color: white;
+padding: 12px;
+width: 100%;
+text-align: left;
+border: none;
+font-size: 16px;
+cursor: pointer;
+border-radius: 4px;
+transition: background-color 0.3s ease;
+}
+
+.qa-question:hover {
+background-color: #005f6a;
+}
+
+.qa-answer {
+display: none;
+padding: 10px;
+background-color: #f1f1f1;
+border-left: 4px solid #008cba;
+border-radius: 4px;
+margin-top: 10px;
+}
+
+@media screen and (max-width:1080px) {
+.container1{
+   flex-direction: column;
+   align-items: center;
+   
+}
+.qa-section{
+   padding: 9rem;
+}
+.qa-item{
+           align-self: center;
+           justify-content: space-evenly;
+}
+
+
+}
+@media screen and (max-width:840px){
+.container1{
+   padding-left: 1rem;
+}
+.qa-section{
+   grid-template-columns: repeat(2,1fr);
+}
+}
+</style>
+
+</head>
+<body>
+<section>
+  <!-- SIDEBAR -->
+     <section>
+      <div id="bar">
+      <div id="main">
+        <!-- <button class="openbtn" onclick="openNav()">☰</button>   -->
+        <!-- <div id="bar1"> -->
+           <div id="mySidebar" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="{% url 'about' %}">About-us</a>
+          <a href="{% url 'service' %}">Services</a>
+          <a href="#">Clients </a>
+          <a href="{% url 'contact' %}">Contact</a>
+          <a href="{% url 'logout' %}" class="navlink1" type="submit">LOGOUT</a>
+          <a href="{% url 'book' %}">Booking</a>
+            </div>
+            <button class="openbtn" onclick="openNav()">☰</button>
+      </div>
+      
+    </div> 
+    </section>
+    <!-- CLOSE SIDEBAR -->
+             <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+             </script>
+             <!-- header -->
+       <section>
+          <div class="header" >
+         <header class="header-content">
+           <a href="logo" class="logo">
+              <img src="/static/images/23.jpg" alt="image" class="arow">
+              <span class="/"> 
+                A.R architect
+              </span> 
+           </a>
+           <nav class="nav">
+          
+              <a href="{% url 'home' %}" class="navlink"><button class="home-button">🏠</button></a>
+             <a href="{% url 'interior' %}" class="navlink">Interior</a>
+             <a href="{% url 'port' %}" class="navlink">Design Ideas
+              
+             </a>
+             <a href="{% url 'magzine' %}" class="navlink">Magazine</a>
+           
+             <div class="dropdown">
+              <button class="dropbtn">Cities
+                 <i class="fa fa-caret-down"></i>
+            </button>
+   <div class="dropdown-content">
+   <div class="row">
+    <div class="column">
+    <h3> cities </h3>
+   <a href="/furniture">Raipur</a>
+    <a href="cauch.html">Chennei</a>
+   <a href="#">Hydrabad</a>
+  <a href="#">Odhisha</a>
+   <a href="#">Tamil-Nadu</a>
+  </div>
+<div class="column">
+<h3>Featured</h3>
+<a href="interior defination.html">Gondiya</a>
+<a href="theinside.html">Rajesthan</a>
+<a href="#">Punjab</a>
+</div>
+<div class="column">
+<h3>Design Awards</h3>
+<a href="#">Best Sectional for small spaces</a>
+<a href="#">Best Throw Blanket</a>
+<a href="#">Best Curtains</a>
+<a href="#">Best Couch</a>
+<a href="#">Best Bed</a>
+<a href="#">View All Categories</a>
+</div>
+</div>
+</div>
+</div> 
+             <!-- <a href="#" class="navlink">Cities</a> -->
+         <div class="dropdown">
+                       <button class="dropbtn">shop
+                          <i class="fa fa-caret-down"></i>
+                     </button>
+            <div class="dropdown-content">
+            <div class="row">
+             <div class="column">
+             <h3>Category </h3>
+            <a href="{% url 'furniture' %}">Furniture</a>
+             <a href="{% url 'pillow' %}">Decore & pillows</a>
+            <a href="#">Rugs</a>
+           <a href="{% url 'light' %}">Lighting</a>
+            <a href="#">Outdoor</a>
+           </div>
+      <div class="column">
+        <h3>Featured</h3>
+        <a href="{% url 'interior' %}">Interior Define</a>
+        <a href="{% url 'in' %}">The Inside</a>
+        <a href="#">Decor must suman</a>
+      </div>
+      <div class="column">
+        <h3>Design Awards</h3>
+        <a href="#">Best Sectional for small spaces</a>
+        <a href="#">Best Throw Blanket</a>
+        <a href="#">Best Curtains</a>
+        <a href="#">Best Couch</a>
+        <a href="#">Best Bed</a>
+        <a href="{% url 'cat' %}">View All Categories</a>
+      </div>
+    </div>
+  </div>
+</div> 
+             <!-- <a href="#" class="navlink">shop</a> -->
+             <a href="{% url 'cat' %}" class="navlink">More</a>
+             <a href="{% url 'layout' %}" class="navlink">layout picture</a>
+             <a href="{% url 'cat' %}" class="navlink">View All Categories</a>
+            
+              </nav>
+              <!-- <a href="SIGNIN.HTML" class="contact-button">SIGN-IN</a> -->
+
+              <!-- hjghgj -->
+        </header>
+        </div>
+      </section>
+       <!-- CLOSE-HEADER -->
+      <!-- GALLARY-IMages -->
+       <section>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="/static/images/IMG-20241125-WA0055.jpg">
+        <img src="/static/images/IMG-20241125-WA0055.jpg" alt="Cinque Terre" width="600" height="400">
+      </a>
+      <div class="desc">modular kitchen</div>
+    </div>
+  </div>
+  
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="/static/images/IMG-20241125-WA0065.jpg">
+        <img src="/static/images/IMG-20241125-WA0065.jpg" alt="Forest" width="600" height="400">
+      </a>
+      <div class="desc">Living room</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="/static/images/IMG-20241125-WA0038.jpg">
+        <img src="/static/images/IMG-20241125-WA0038.jpg" alt="Northern Lights" width="600" height="400">
+      </a>
+      <div class="desc">stairs</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="/static/images/IMG-20241125-WA0057.jpg">
+        <img src="/static/images/IMG-20241125-WA0057.jpg" alt="Mountains" width="600" height="400">
+      </a>
+      <div class="desc">design</div>
+      
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+       </section>
+       <!-- close gallery -->
+       <!-- image-slidbar -->
+    <!-- <section>
+
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 5</div>
+        <img src="furnitureimages/20221001_103611.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="furnitureimages/20210127_162550.jpg" style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="furnitureimages/20210726_170855.jpg" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="furnitureimages/20211031_092724.jpg" style="width:100%">
+        <div class="text">Caption four</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="furnitureimages/20211212_140037.jpg" style="width:100%">
+        <div class="text">Caption five</div>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(1)"></span> 
+      </div>
+      
+      <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
+    </section> -->
+    <!-- closeimage slidebar -->
+
+<!-- qna section -->
+<div class="container1">
+  <h1>Interior Design Q&A</h1>
+  <div class="qa-section">
+    <div class="qa-item">
+      <button class="qa-question" onclick="toggleAnswer(0)">What is interior design?</button>
+      <p class="qa-answer" id="answer-0">Interior design is the art and science of enhancing the interior of a building to achieve a healthier and more aesthetically pleasing environment for the people using the space.</p>
+    </div>
+    <div class="qa-item">
+      <button class="qa-question" onclick="toggleAnswer(1)">Why is lighting important in interior design?</button>
+      <p class="qa-answer" id="answer-1">Lighting is crucial as it affects the mood, ambiance, and functionality of a room. Proper lighting highlights key features and ensures comfort.</p>
+    </div>
+    <div class="qa-item">
+      <button class="qa-question" onclick="toggleAnswer(2)">How do I choose the right colors for my room?</button>
+      <p class="qa-answer" id="answer-2">Start by considering the mood you want to create. Warm colors like reds and oranges create energy, while cool colors like blues and greens create calm.</p>
+    </div>
+    <div class="qa-item">
+      <button class="qa-question" onclick="toggleAnswer(3)">What are the latest interior design trends?</button>
+      <p class="qa-answer" id="answer-3">Minimalism, biophilic design (bringing nature indoors), sustainable materials, and smart home integration are some of the latest trends in interior design.</p>
+    </div>
+    <!-- New questions added -->
+    <div class="qa-item">
+      <button class="qa-question" onclick="toggleAnswer(4)">How can I make my small space look bigger?</button>
+      <p class="qa-answer" id="answer-4">Use light colors for walls, avoid heavy furniture, and incorporate mirrors to reflect light. Vertical storage and multi-purpose furniture also help maximize space.</p>
+    </div>
+    <div class="qa-item">
+      <button class="qa-question" onclick="toggleAnswer(5)">What are the benefits of using sustainable materials in interior design?</button>
+      <p class="qa-answer" id="answer-5">Sustainable materials are eco-friendly, reduce waste, and contribute to a healthier indoor environment. They often use fewer resources and have less environmental impact.</p>
+    </div>
+    <div class="qa-item">
+      <button class="qa-question" onclick="toggleAnswer(6)">How do I incorporate technology into my interior design?</button>
+      <p class="qa-answer" id="answer-6">Smart home devices such as smart lighting, thermostats, and security systems can be seamlessly integrated into your design. You can also use wireless chargers and hidden tech to maintain aesthetics.</p>
+    </div>
+    <div class="qa-item">
+      <button class="qa-question" onclick="toggleAnswer(7)">What are some tips for designing a home office?</button>
+      <p class="qa-answer" id="answer-7">Choose ergonomic furniture, keep the space organized, use good lighting, and add personal touches like plants or artwork. Ensure the office is free from distractions and conducive to productivity.</p>
+    </div>
+    <div class="qa-item">
+      <button class="qa-question" onclick="toggleAnswer(8)">How can I mix different interior design styles?</button>
+      <p class="qa-answer" id="answer-8">Start with a neutral base and then add accent pieces that reflect different styles. Ensure there's cohesion in the color scheme and texture to prevent the space from looking chaotic.</p>
+    </div>
+    
+  </div>
+ 
+  </div>
+
+<!-- footer -->
+<div class="footer-container">
+  <footer class="footer">
+        <div class="footer-top">
+               <div class="comp-logo">
+                      <a class="logo-link" href="#">
+                              <img class="logo-image" src="/static/images/23.jpg">
+                              A.R architect
+                  </a>
+                      <p class="text"></p>
+                      <div class="social">
+                             <a class="social-link">
+                                  <img src="/static/google.png" alt="google" class="social-icon">
+                             </a>
+
+                             <a class="social-link">
+                              <img src="/static/logo_11378754.png" alt="micro" class="social-icon">
+                         </a>
+
+                         <a class="social-link">
+                           <img src="/static/instagram_2111463.png" alt="linkdin" class="social-icon">
+                          </a>
+
+                      <a class="social-link">
+                        <img src="/static/youtube.png" alt="youtube" class="social-icon">
+                         </a>
+
+                         <a class="social-link">
+                          <img src="/static/telegram_2111646.png" alt="youtube" class="social-icon">
+                           </a>
+
+                      </div>
+                     </div>
+        </div>
+       <div class="footer-grid">
+                    <!-- coloun1 -->
+             <div class="footer-grid-column">
+                      <div class="footer-grid-heading">
+                           Products
+                      </div>
+                      <ul class="footer-link-list">
+                          <li>
+                             <a href="{% url 'furniture' %}" class="footer-link">Furniture</a>
+                          </li>
+
+                          <li>
+                           <a href="{% url 'pillow' %}" class="footer-link">Decore & pillows</a>
+                        </li>
+
+                        <li>
+                           <a href="#overview" class="footer-link">Rugs</a>
+                        </li>
+
+                        <li>
+                           <a href="{% url 'light' %}" class="footer-link">Lighting</a>
+                        </li>
+
+                        <li>
+                          <a href="#overview" class="footer-link">Outdoor</a>
+                       </li>
+                      </ul>
+            </div>
+                    <!-- coloun2 -->
+               <!-- <div class="footer-grid-column">
+                           <div class="footer-grid-heading">
+                                Products
+                           </div>
+                           <ul class="footer-link-list"> -->
+                               <!-- <li>
+                                  <a href="#overview" class="footer-link">terms of condition</a>
+                               </li>
+  
+                               <li>
+                                <a href="#overview" class="footer-link">cookie settings</a>
+                             </li>
+  
+                             <li>
+                                <a href="#overview" class="footer-link">policy</a>
+                             </li> -->
+  
+                             <!-- <li>
+                                <a href="#overview" class="footer-link">Overview</a>
+                             </li>
+                             <li>
+                              <a href="#overview" class="footer-link">press</a>
+                           </li>
+                           <li>
+                              <a href="#overview" class="footer-link">blog</a>
+                           </li>
+                           </ul> -->
+                <!-- </div> -->
+                     
+                   <!-- coloun3 -->
+               <div class="footer-grid-column">
+                           <div class="footer-grid-heading">
+                                services
+                           </div>
+                           <ul class="footer-link-list">
+                               <li>
+                                  <a href="{% url 'about' %}" class="footer-link">About</a>
+                               </li>
+  
+                               <li>
+                                <a href="{% url 'contact' %}" class="footer-link">Contact</a>
+                             </li>
+  
+                             <li>
+                                <a href="#" class="footer-link">login</a>
+                             </li>
+  
+                             <li>
+                                <a href="{% url 'layout' %}" class="footer-link">layout</a>
+                             </li>
+                           </ul>
+                </div>
+                   
+                  <!-- coloun4 -->
+                <div class="footer-grid-column">
+                     <div class="footer-grid-heading">
+                          overview
+                     </div>
+                     <ul class="footer-link-list">
+                      <li>
+                        <a href="{% url 'furniture' %}" class="footer-link">Furniture</a>
+                     </li>
+
+                     <li>
+                      <a href="{% url 'pillow' %}" class="footer-link">Decore & pillows</a>
+                   </li>
+
+                   <li>
+                      <a href="#overview" class="footer-link">Rugs</a>
+                   </li>
+
+                   <li>
+                      <a href="#" class="footer-link">Lighting</a>
+                   </li>
+
+                   <li>
+                     <a href="#overview" class="footer-link">Outdoor</a>
+                  </li>
+                  <li>
+                    <a href="about-us.html" class="footer-link">About</a>
+                 </li>
+
+                 <li>
+                  <a href="contactus.html" class="footer-link">Contact</a>
+               </li>
+
+               <li>
+                  <a href="signinlogin.html" class="footer-link">login</a>
+               </li>
+
+               <li>
+                  <a href="layout.html" class="footer-link">layout</a>
+               </li>
+                       
+                     </ul>
+                </div>   
+       </div>
+  </footer>
+  <div class="footer-copyright">
+        @2021 -present A.R architect. All rigts reserved.
+  </div>
+  
+</div>
+
+
+<script src="/static/q.js">
+  </script>
+</section>
+</body>
+</html>
+

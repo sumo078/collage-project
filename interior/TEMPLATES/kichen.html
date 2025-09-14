@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Kitchen Design</title>
+    <style>
+        /* Basic reset */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+            {% comment %} background-color: #333; {% endcomment %}
+            color: white;
+            padding: 15px 0;
+        }
+
+        header .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Intro Section */
+        .intro {
+            background-color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .intro h2 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Kitchen Gallery */
+        .kitchen-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item h3 {
+            padding: 10px;
+            font-size: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        .gallery-item p {
+            padding: 10px;
+            font-size: 16px;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: linear-gradient(to bottom,rgb(210, 164, 226) 0%,rgb(167, 199, 245) 100%);
+            {% comment %} background-color: #333; {% endcomment %}
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .kitchen-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .kitchen-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Modern Kitchen Designs</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url "home" %}">Home</a></li>
+                <li><a href="{% url 'furniture' %}">Designs</a></li>
+                <li><a href="{% url "about" %}">About Us</a></li>
+                <li><a href="{% url "contact" %}">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="intro">
+    <div class="container">
+        <h2>Transform your cooking space with modern elegance</h2>
+        <p>Explore sleek kitchen designs that blend functionality with contemporary aesthetics.</p>
+    </div>
+</section>
+
+<section class="kitchen-gallery">
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/pictures/kitchens/large-deep-drawers-cabinet-innovations-img~3ca15f99037a6170_6477-1-5090f80-w360-h360-b0-p0.jpg" alt="Modern Kitchen 1">
+        <h3>Luxury Modern Kitchen</h3>
+        <p>Modern design with elegant deep drawers and top-quality finishes for a sophisticated space.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/pictures/kitchens/modernist-family-home-my-studio-ltd-img~42a1451a0d4d87ac_6975-1-aae72e2-w360-h360-b0-p0.jpg" alt="Modern Kitchen 2">
+        <h3>Sleek Urban Kitchen</h3>
+        <p>Minimalist urban style with clean lines and innovative design elements for a modern look.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/pictures/kitchens/high-street-project-r-z-owens-constructions-img~43119d07045c50e0_3667-1-7ebf686-w360-h360-b0-p0.jpg" alt="Modern Kitchen 3">
+        <h3>Open Concept Kitchen</h3>
+        <p>Spacious and light-filled kitchen with an open concept, perfect for family gatherings and entertaining.</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/ca11a56505121622_8833-w360-h360-b0-p0--.jpg" alt="Modern Kitchen 4">
+        <h3>Contemporary Chic Kitchen</h3>
+        <p>Modern, sleek finishes and a clean design make this kitchen both functional and beautiful.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/8f71d01a0388dfce_4689-w360-h360-b0-p0--.jpg" alt="Modern Kitchen 5">
+        <h3>Bold and Stylish Kitchen</h3>
+        <p>Bright colors and bold design elements bring a modern touch to your kitchen space.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/pictures/kitchens/navy-blue-kitchen-cabinets-perfect-fit-for-a-classy-and-sophisticated-kitchen-save-home-img~9de102580f8d5ab2_6670-1-200fd39-w360-h360-b0-p0.jpg" alt="Modern Kitchen 6">
+        <h3>Elegant Blue Cabinets</h3>
+        <p>Sophisticated navy-blue cabinets offer a classy and stylish touch to this modern kitchen.</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/7921a3b504ff29ca_9660-w360-h360-b0-p0--.jpg" alt="Modern Kitchen 7">
+        <h3>Modern Island Kitchen</h3>
+        <p>The central island creates a functional workspace while adding a modern aesthetic to the kitchen.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/47f144a70455a3ee_4128-w360-h360-b0-p0--.jpg" alt="Modern Kitchen 8">
+        <h3>Minimalist Design</h3>
+        <p>A minimalist design with neutral tones and sleek finishes creates a calm and stylish kitchen environment.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/b5315afa03a08fbc_1167-w360-h360-b0-p0--.jpg" alt="Modern Kitchen 9">
+        <h3>Spacious Modern Kitchen</h3>
+        <p>Clean, spacious layout with modern fixtures, offering a perfect blend of functionality and style.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Modern Kitchen Design. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    console.log("Modern Kitchen Design Page Loaded!");
+</script>
+
+</body>
+</html>

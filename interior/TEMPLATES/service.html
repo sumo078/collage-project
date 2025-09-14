@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            text-decoration: none;
+            height: 100vh;
+            text-align: center;
+            background-image: linear-gradient(to top, #fbc2eb 0%, #fbc2eb 100%);
+
+        }
+        /* .container{
+            display: flex;
+            flex-direction: column;
+           text-decoration: none;
+            height: 100%;
+            width: 100%; */
+
+
+        /* } */
+        #image{
+              box-shadow: 7px 1px 3px black;
+               width: 100vw;
+        }
+
+        .information{
+            display: flex;
+            justify-items: center;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+            align-self: center;
+            
+        }
+
+        .description{
+           
+            margin-left: 20rem;
+            /* justify-items: center;
+            align-items: center; */
+            display: flex;
+            width: 100%;
+            gap: 5rem;
+        }
+
+
+
+        .description1{
+           
+           margin-left: 20rem;
+           /* justify-items: center;
+           align-items: center; */
+           display: flex;
+
+           width: 100%;
+           gap: 5rem;
+       }
+       @media screen and (max-width:768px) {
+.description{
+  grid-template-columns: repeat(1,1fr);
+  
+}
+
+}
+
+
+@media screen and (max-width:768px) {
+.description1{
+  grid-template-columns: repeat(1,1fr);
+  
+}
+
+}
+
+
+
+@media screen and (max-width:768px) {
+.description2{
+  grid-template-columns: repeat(1,1fr);
+  
+}
+
+}
+
+
+       .description2{
+           
+           margin-left: 20rem;
+           /* justify-items: center;
+           align-items: center; */
+           display: flex;
+           width: 100%;
+           gap: 5rem;
+       }
+        #info{
+            margin-top: 3rem;
+            margin-left: 5rem;
+        }
+        @media screen and (min-width:768px){
+             .info{
+               display: block;
+                }
+        }
+        #info a{
+            
+            font-size: large;
+           color: black;
+            text-decoration: none;
+        }
+        #info a:hover{
+            color: rgb(33, 13, 213);
+        }
+        /* .box1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        } */
+        .heading{
+            margin-top: 5rem;
+            align-items: center;
+            display: flex;
+           justify-items: center;
+            flex-direction: column;
+        }
+        .box1 ul li{
+            font-family: 'poppins',sans-serif;
+           color: black;
+            margin-top: 1.5rem;
+        }
+        .box1 ul li:hover{
+
+            color: blue;
+        }
+        .box1 ul a {
+            text-decoration: none;
+        }
+        #logo{
+            height: 5rem;
+            width: 5rem;
+        }
+
+
+/* footer */
+.footer-container{
+  
+  margin-top:5rem;
+  /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+  /* background-color: transparent; */
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  /* max-width: 1280px; */
+  width: 100%;
+}
+.footer{
+    background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+  margin-top: 35rem;
+  width: 100%;
+  padding: 1rem 2.4rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+.footer-top{
+     width: 34%;
+     display: flex;
+     flex-direction: column;
+     gap:2rem;
+}
+.logo-image{
+  width: 2rem;
+  height:1.5rem ;
+}
+.social-icon{
+
+   width: 1.5rem;
+   height: 1.5rem;
+}
+.logo-link{
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  gap:0.5rem;
+  color: black;
+}
+.comp-logo{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-bottom: -1.6rem;
+  gap: 1.2em;
+}
+.text{
+     font-size: 1rem;
+     color: #777;
+     gap:1rem;
+}
+.footer-grid{
+   display: grid;
+   grid-template-columns: repeat(4,1fr) ;
+   grid-gap:5.67rem;
+
+   /* padding: 2rem 0.4rem; */
+}
+.footer-grid-heading{
+   font-size: 1.05rem;
+   font-weight: bold;
+   color: var(--text-color);
+}
+ul{
+  list-style-type: none;
+}
+.footer-link{
+       color: #777;
+       font-size: 0.875rem;
+}
+
+.footer-link-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.footer-grid-heading{
+   margin-bottom: 1.65rem;
+}
+.footer-link-list li :hover
+{
+color:#008cba
+}
+.social{
+  display: flex;
+  gap:0.8rem;
+}
+.footer-copyright{
+  background-image: linear-gradient(to top, #ffddf5 0%, #a6c1ee 100%);
+  color: rgb(58, 54, 54);
+  /* align-items: center;
+  justify-content: center; */
+  /* align-self: center; */
+  align-items: center;
+  font-size: 1rem;
+  padding-bottom: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid #e5e7e8;
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: rgb(11, 5, 5);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width:1080px) {
+  .footer{
+     flex-direction: column;
+     align-items: center;
+     
+  }
+  .footer-top{
+     padding: 9rem;
+  }
+  .footer-grid{
+             align-self: center;
+             justify-content: space-evenly;
+  }
+
+
+}
+@media screen and (max-width:840px){
+  .footer-top{
+     padding-left: 1rem;
+  }
+  .footer-grid{
+     grid-template-columns: repeat(2,1fr);
+  }
+}
+
+         
+       
+    </style>
+</head>
+<body>
+    <!-- <div class="container"> -->
+        <img src="https://images.livspace-cdn.com/w:1920/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/sg/how-it-works/HIW_desktop_banner_v1_1.jpg" alt=""  id="image">
+      <p id="info"><a href="{% url "home" %}">home</a><a href="">/interior</a><a href="">/service</a></p>
+        <div class="information">
+            <div class="heading">
+                        <h1>Policies</h1>
+                         <p>Get all the information you need</p>
+            </div>
+           <!-- description-1 -->
+            <div class="description">
+
+                <div class="box1">
+                    <img src="https://images.livspace-cdn.com/w:1920/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/sg/service/emi_v1_1.png" alt="" id="logo">
+                    <h1>Terms of use</h1>
+                    <ul>
+                   <a href=""><li>General</li></a>
+                    <a href=""><li>Definition and interpretion</li></a>
+                    <a href=""><li>Eligiblity To Use</li></a>
+                  <a href=""> <li>Account Registration</li></a>
+                    <a href=""><li>Our services</li></a>
+                    </ul>
+                </div>
+
+                <div class="box1">
+                    <img src="https://images.livspace-cdn.com/w:1920/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/sg/service/getting_started_v1_1.png" alt="" id="logo">
+                    <h1>Getting started</h1>
+                    <ul>
+                        <a href=""><li>Getting started</li></a>
+                    </ul>
+                </div>
+
+                <div class="box1">
+                    <img src="https://images.livspace-cdn.com/w:1920/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/sg/service/designing_with_livspace_v1_1.png" alt="" id="logo">
+                    <h1>Designing with A.r architect</h1>
+                    <ul>
+                   <a href=""> <li>Designing my dream home</li></a>
+                    <a href=""><li>Managing my home project</li></a>
+                    <a href=""><li>Delivery and installation</li></a>
+                    <a href=""><li>paying for the home interior</li></a>
+                    </ul>
+                </div>
+            </div>
+
+         <!-- description-2 -->
+            <div class="description1">
+
+                <div class="box1">
+                    <img src="https://images.livspace-cdn.com/w:1920/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/sg/service/payments_v1_1.png" alt="" id="logo">
+                    <h1>Payments</h1>
+                    <ul>
+                   <a href=""><li>General</li></a>
+                    <a href=""><li>Definition and interpretion</li></a>
+                    <a href=""><li>Eligiblity To Use</li></a>
+                  <a href=""> <li>Account Registration</li></a>
+                    <a href=""><li>Our services</li></a>
+                    </ul>
+                </div>
+
+                <div class="box1">
+                    <img src="https://images.livspace-cdn.com/w:1920/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/sg/service/emi_v1_1.png" alt="" id="logo">
+                    <h1>EMI option</h1>
+                    <ul>
+                        <a href=""><li>Easy EMIs</li></a>
+                        <a href=""><li>Eligiblity Criteria</li></a>
+                        <a href=""><li>Precedure Overview</li></a>
+                        <a href=""><li>Understanding Your payment options</li></a>
+                        <a href=""><li>Data Handling and Accountablity</li></a>
+                        <a href=""><li>Getting started</li></a>
+                    </ul>
+                </div>
+
+                <div class="box1">
+                    <img src="https://images.livspace-cdn.com/w:1920/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/sg/service/cancellation_v1_1.png" alt="" id="logo">
+                    <h1>cancellations</h1>
+                    <ul>
+                   <a href=""> <li>cancellations</li></a>
+                    </ul>
+                </div>
+                </div>
+
+
+<!-- description 3 -->
+          <div class="description2">
+
+                    <div class="box1">
+                        <img src="https://images.livspace-cdn.com/w:1920/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/sg/service/designing_with_livspace_v1_1.png" alt="" id="logo">
+                        <h1>A.r architect Warranty</h1>
+                        <ul>
+                       <a href=""><li>General</li></a>
+                        <a href=""><li>Definition and interpretion</li></a>
+                        <a href=""><li>Eligiblity To Use</li></a>
+                      <a href=""> <li>Account Registration</li></a>
+                        <a href=""><li>Our services</li></a>
+                        </ul>
+                    </div>
+    
+                    <div class="box1">
+                        <img src="https://images.livspace-cdn.com/w:1920/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/sg/service/terms-of-use_v1_2.png" alt="" id="logo">
+                        <h1>Customer Terms & Conditions</h1>
+                        <ul>
+                            <a href=""><li>scope of work</li></a>
+                            <a href=""><li>payment Terms</li></a>
+                            <a href=""><li>Obligation of parties</li></a>
+                            <a href=""><li>Project Delivery TimeLines</li></a>
+                            <a href=""><li>Project Delays & Penalty Terms</li></a>
+                            <a href=""><li>Getting started</li></a>
+                        </ul>
+                    </div>
+    
+                    <div class="box1">
+                        <img src="https://images.livspace-cdn.com/w:1920/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/sg/service/care_instruction_v1_1.png" alt="" id="logo">
+                        <h1>care instruction</h1>
+                        <ul>
+                       <a href=""> <li>Care instructions for your Homes</li></a>
+                        </ul>
+                    </div>
+            </div>
+    
+         </div>
+
+
+
+
+
+         <div class="footer-container">
+            <footer class="footer">
+                  <div class="footer-top">
+                         <div class="comp-logo">
+                                <a class="logo-link" href="#">
+                                        <img class="logo-image" src="images/23.jpg">
+                                        A.R architect
+                            </a>
+                                <p class="text"></p>
+                                <div class="social">
+                                       <a class="social-link">
+                                            <img src="/static/google.jpg" alt="google" class="social-icon">
+                                       </a>
+          
+                                       <a class="social-link">
+                                        <img src="/staticmicro.jpg" alt="micro" class="social-icon">
+                                   </a>
+          
+                                   <a class="social-link">
+                                     <img src="whatsapp.jpg" alt="linkdin" class="social-icon">
+                                    </a>
+          
+                                <a class="social-link">
+                                  <img src="youtube.jpg" alt="youtube" class="social-icon">
+                                   </a>
+          
+                                </div>
+                               </div>
+                  </div>
+                 <div class="footer-grid">
+                              <!-- coloun1 -->
+                       <div class="footer-grid-column">
+                                <div class="footer-grid-heading">
+                                     Products
+                                </div>
+                                <ul class="footer-link-list">
+                                    <li>
+                                       <a href="FURNITURE.html" class="footer-link">Furniture</a>
+                                    </li>
+          
+                                    <li>
+                                     <a href="#overview" class="footer-link">Decore & pillows</a>
+                                  </li>
+          
+                                  <li>
+                                     <a href="#overview" class="footer-link">Rugs</a>
+                                  </li>
+          
+                                  <li>
+                                     <a href="#overview" class="footer-link">Lighting</a>
+                                  </li>
+          
+                                  <li>
+                                    <a href="#overview" class="footer-link">Outdoor</a>
+                                 </li>
+                                </ul>
+                      </div>
+                              <!-- coloun2 -->
+                         <div class="footer-grid-column">
+                                     <div class="footer-grid-heading">
+                                          Products
+                                     </div>
+                                     <ul class="footer-link-list">
+                                         <li>
+                                            <a href="#overview" class="footer-link">terms of condition</a>
+                                         </li>
+            
+                                         <li>
+                                          <a href="#overview" class="footer-link">cookie settings</a>
+                                       </li>
+            
+                                       <li>
+                                          <a href="#overview" class="footer-link">policy</a>
+                                       </li>
+            
+                                       <li>
+                                          <a href="#overview" class="footer-link">Overview</a>
+                                       </li>
+                                       <li>
+                                        <a href="#overview" class="footer-link">press</a>
+                                     </li>
+                                     <li>
+                                        <a href="#overview" class="footer-link">blog</a>
+                                     </li>
+                                     </ul>
+                          </div>
+                               
+                             <!-- coloun3 -->
+                         <div class="footer-grid-column">
+                                     <div class="footer-grid-heading">
+                                          services
+                                     </div>
+                                     <ul class="footer-link-list">
+                                         <li>
+                                            <a href="about-us.html" class="footer-link">About</a>
+                                         </li>
+            
+                                         <li>
+                                          <a href="contactus.html" class="footer-link">Contact</a>
+                                       </li>
+            
+                                       <li>
+                                          <a href="signinlogin.html" class="footer-link">login</a>
+                                       </li>
+            
+                                       <li>
+                                          <a href="layout.html" class="footer-link">layout</a>
+                                       </li>
+                                     </ul>
+                          </div>
+                             
+                            <!-- coloun4 -->
+                          <div class="footer-grid-column">
+                               <div class="footer-grid-heading">
+                                    overview
+                               </div>
+                               <ul class="footer-link-list">
+                                <li>
+                                  <a href="FURNITURE.html" class="footer-link">Furniture</a>
+                               </li>
+          
+                               <li>
+                                <a href="#overview" class="footer-link">Decore & pillows</a>
+                             </li>
+          
+                             <li>
+                                <a href="#overview" class="footer-link">Rugs</a>
+                             </li>
+          
+                             <li>
+                                <a href="#overview" class="footer-link">Lighting</a>
+                             </li>
+          
+                             <li>
+                               <a href="#overview" class="footer-link">Outdoor</a>
+                            </li>
+                            <li>
+                              <a href="about-us.html" class="footer-link">About</a>
+                           </li>
+          
+                           <li>
+                            <a href="contactus.html" class="footer-link">Contact</a>
+                         </li>
+          
+                         <li>
+                            <a href="signinlogin.html" class="footer-link">login</a>
+                         </li>
+          
+                         <li>
+                            <a href="layout.html" class="footer-link">layout</a>
+                         </li>
+                                 
+                               </ul>
+                          </div>   
+                 </div>
+            </footer>
+            <div class="footer-copyright">
+                  @2021 -present A.R architect. All rigts reserved.
+            </div>
+            
+          </div>
+        
+         
+        
+
+
+
+       
+    
+<!-- footer -->
+
+
+
+
+
+
+
+
+
+  
+</body>
+</html>
+

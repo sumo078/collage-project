@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   margin-top: 200px;
+        }
+
+        #h{
+            margin: 0.5rem;
+            padding: 0%;
+            gap: 0;
+        }
+        #img{
+            height: 4rem;
+            width: 4rem;
+        }
+        #anker{
+            text-decoration: none;
+            color: rgb(214, 114, 131);
+        }
+        #anker:hover{
+            color: rgb(223, 78, 102);
+        }
+        .container2{
+            
+            display: flex;
+            flex-direction: column;
+            border-radius: 2rem;
+            border-color: black;
+        }
+        #imgg{
+            margin-top: 0.5rem;
+            margin-left: 8rem;
+            height: 2rem;
+            width: 2rem;
+        }
+        #mail{
+            display: flex;
+            flex-direction: row;
+        }
+        #no{
+            display: flex;
+            flex-direction: row;
+        }
+        button{
+            border-radius: 2rem;
+            width: 21rem;
+        }
+        #imgg1{
+            margin-top: 0.5rem;
+            margin-left: 12rem;
+            height: 1.4rem;
+            width: 1.4rem;
+        }
+        #home{
+            font-weight: 500px;
+            font-size: 25px;
+            margin-top: 2rem;
+            margin-left: 6rem;
+        }
+    </style>
+</head>
+<body>
+    <p id="home"><a href="{% url 'home' %}" id="anker">Home</a>/contact us</p>
+    <div class="container">
+    <img src="https://images.livspace-cdn.com/w:1920/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/contact-icon-1734351899-uIzhv.png" alt="" id="img">
+    <h1>Contact us</h1>
+
+   <h3 id="h"> Help is just a click away</h3>
+    <p id="h">Call us anytime between 10am - 7pm</p>
+
+    <div class="container2">
+        <button>
+        <span id="mail">
+            
+        
+        <p>care@A.R architects.com</p>
+        <img src="/static/img/mail.jpg" alt="" id="imgg">
+        
+        </span>
+        </button>
+        
+        <button>
+       <span id="no">
+        <p>1800-309-0930</p>
+       <img src="https://www.livspace.com/_nuxt/img/call.3871073.png" alt="" id="imgg1">
+       </span>
+       </button>
+        
+    </div>
+
+
+</div>
+    
+</body>
+</html>

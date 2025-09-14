@@ -1,0 +1,612 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+  /* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); */
+   height: 100vh;
+   /* background-color: var(--background-color); */
+
+   padding: o.3rem;
+}
+/* header-section */
+.header{
+  
+  /* margin-top: 3rem; */
+  margin: 1.5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.header-content{
+    margin: 3rem;
+    background: url("");
+    justify-content: space-between;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+.logo{
+   display: flex;
+   font-size: 2rem;
+   font-weight: bold;
+   color: var(--text-color);
+   text-decoration: none;
+   gap:0.625;
+}
+.arow{
+    height: 5rem;
+    width: 5rem;
+}
+.nav{
+    gap:1.5rem;
+    
+     }
+    @media screen and (min-width:768px){
+     .nav{
+        display: flex;
+     }
+    }
+    nav :hover{
+        color: blue;
+    }
+    .navlink{
+        
+        text-decoration: none;
+        color: #718096;
+        font-size: 1.125;
+        font-weight: 600;
+        transform: color 0.1s;
+    }
+    .navlink :hover{
+        color: blue;
+    }
+/* dropdown */
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: #718096;;
+  background-color: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  /* height: 60%; */
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .header {
+  background: red;
+  padding: 16px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: #ccc;
+  height: 400px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ghgkkhjkhk */
+    /* .contact-button{
+        text-decoration: none;
+        height: 1.5rem;
+        margin: 0%;
+        display: none;
+        border: none;
+        border-radius: 0.375rem;
+        background-color: rgb(113, 113, 191);
+        color: white;
+        transform: all 0.1s;
+        padding:0.5rem ;
+        font-size:1rem;
+        font-weight:600;
+
+        
+        }
+        @media screen and (min-width:768px){
+        .contact-button{
+         display: block;
+        }
+    }
+    .contact-button:hover{
+        background-color: #161878;
+} */
+/* sidebar */
+/* #menu{
+  background-color: #f2f2f2;
+}
+#menu:hover{
+  background-color: #444; 
+} */
+#bar{
+  width: 100%;
+  transition: 0.10s;
+  background-color:transparent;
+}
+#bar:hover{
+background-color:rgb(47, 43, 43);
+}
+.sidebar {
+    /* display:none; */
+    /* position: absolute; */
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color:black;
+    overflow-x: hidden;
+    transition: 2.0s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 15px;
+    cursor: pointer;
+    background-color:black;
+    color: white;
+    padding: 2px 4px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    /* cursor: auto; */
+
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left 0.5s;
+    padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+  /* image-gallery*/
+  div.gallery {
+    border: 1px solid #ccc;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+
+  /* slidbar */
+  /* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+  margin-top: 3rem;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+/* footer */
+.footer-container{
+  background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+  margin-top: 5rem;
+  /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+  /* background-color: transparent; */
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  /* max-width: 1280px; */
+  width: 100%;
+}
+.footer{
+  margin-top: 5rem;
+  max-width: 1280px;
+  padding: 1rem 2.4rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+.footer-top{
+     width: 34%;
+     display: flex;
+     flex-direction: column;
+     gap:2rem;
+}
+.logo-image{
+  width: 2rem;
+  height:1.5rem ;
+}
+.social-icon{
+
+   width: 1.5rem;
+   height: 1.5rem;
+}
+.logo-link{
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  gap:0.5rem;
+  color: black;
+}
+.comp-logo{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-bottom: -1.6rem;
+  gap: 1.2em;
+}
+.text{
+     font-size: 1rem;
+     color: #777;
+     gap:1rem;
+}
+.footer-grid{
+   display: grid;
+   grid-template-columns: repeat(4,1fr) ;
+   grid-gap:5.67rem;
+
+   /* padding: 2rem 0.4rem; */
+}
+.footer-grid-heading{
+   font-size: 1.05rem;
+   font-weight: bold;
+   color: var(--text-color);
+}
+ul{
+  list-style-type: none;
+}
+.footer-link{
+       color: #777;
+       font-size: 0.875rem;
+}
+
+.footer-link-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.footer-grid-heading{
+   margin-bottom: 1.65rem;
+}
+.footer-link-list li :hover
+{
+color:#008cba
+}
+.social{
+  display: flex;
+  gap:0.8rem;
+}
+.footer-copyright{
+  background-image: linear-gradient(to top, #ffddf5 0%, #a6c1ee 100%);
+  color: rgb(58, 54, 54);
+  /* align-items: center;
+  justify-content: center; */
+  /* align-self: center; */
+  align-items: center;
+  font-size: 1rem;
+  padding-bottom: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid #e5e7e8;
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: rgb(11, 5, 5);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width:1080px) {
+  .footer{
+     flex-direction: column;
+     align-items: center;
+     
+  }
+  .footer-top{
+     padding: 9rem;
+  }
+  .footer-grid{
+             align-self: center;
+             justify-content: space-evenly;
+  }
+
+
+}
+@media screen and (max-width:840px){
+  .footer-top{
+     padding-left: 1rem;
+  }
+  .footer-grid{
+     grid-template-columns: repeat(2,1fr);
+  }
+}
+
+
+
+/* qna section */
+.container1 {
+  margin-top: 4rem;
+  margin-left: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 1280px;
+  width: 90%;
+  /* max-width: 600px; */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.qa-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.qa-item {
+  margin-bottom: 15px;
+}
+
+.qa-question {
+  background-color: #008cba;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.qa-question:hover {
+  background-color: #005f6a;
+}
+
+.qa-answer {
+  display: none;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-left: 4px solid #008cba;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width:1080px) {
+  .container1{
+     flex-direction: column;
+     align-items: center;
+     
+  }
+  .qa-section{
+     padding: 9rem;
+  }
+  .qa-item{
+             align-self: center;
+             justify-content: space-evenly;
+  }
+
+
+}
+@media screen and (max-width:840px){
+  .container1{
+     padding-left: 1rem;
+  }
+  .qa-section{
+     grid-template-columns: repeat(2,1fr);
+  }
+}

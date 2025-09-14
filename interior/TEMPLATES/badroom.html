@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Bed Design</title>
+    <style>
+        /* Basic reset */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+            background-color:rgb(250, 242, 242);
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(to bottom,rgb(210, 164, 226) 0%,rgb(167, 199, 245) 100%);
+            {% comment %} background-color: #333; {% endcomment %}
+            color: white;
+            padding: 15px 0;
+        }
+
+        header .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Intro Section */
+        .intro {
+            background-color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .intro h2 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Bed Design Gallery */
+        .living-room-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item h3 {
+            padding: 10px;
+            font-size: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        .gallery-item p {
+            padding: 10px;
+            font-size: 16px;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: linear-gradient(to bottom,rgb(210, 164, 226) 0%,rgb(167, 199, 245) 100%);
+            {% comment %} background-color: #333; {% endcomment %}
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .living-room-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .living-room-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Modern Bed Designs</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url "home" %}">Home</a></li>
+                <li><a href="{% url "furniture" %}">Designs</a></li>
+                <li><a href="{% url "about" %}">About Us</a></li>
+                <li><a href="{% url "contact" %}">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="intro">
+    <div class="container">
+        <h2>Transform your bedroom with modern elegance</h2>
+        <p>Explore stylish bed designs that combine comfort with contemporary aesthetics.</p>
+    </div>
+</section>
+
+<section class="living-room-gallery">
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/pictures/bedrooms/new-canaan-residence-specht-architects-img~207133c10123f689_3865-1-58072c0-w360-h360-b0-p0.jpg" alt="Modern Bed 1">
+        <h3>Luxury Modern Bed</h3>
+        <p>Elegant design with a minimalist frame and plush bedding for ultimate comfort.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/pictures/bedrooms/white-lodge-fadd-studio-img~3131304a08634ba7_3177-1-277ad85-w360-h360-b0-p0.jpg" alt="Modern Bed 2">
+        <h3>Sleek Urban Bed</h3>
+        <p>Modern urban style with clean lines and cozy, stylish bedding for a perfect retreat.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/f7e1e6b8036a4943_9993-w360-h360-b0-p0--.jpg" alt="Modern Bed 3">
+        <h3>Open Concept Bedroom</h3>
+        <p>Bright, airy space with an open layout and chic modern bed design.</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/pictures/bedrooms/rsa-residence-purple-studio-img~a0f19a530a13e7e9_3439-1-46a342b-w360-h360-b0-p0.jpg" alt="Modern Bed 4">
+        <h3>Luxury Modern Bed</h3>
+        <p>Contemporary bed frame with plush upholstery for a luxurious feel.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/a5c1893f05f7da4f_8664-w360-h360-b0-p0--.jpg" alt="Modern Bed 5">
+        <h3>Sleek Urban Bed</h3>
+        <p>Urban chic with a focus on clean lines and stylish simplicity.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/3c41108f0320a434_3594-w360-h360-b0-p0--.jpg" alt="Modern Bed 6">
+        <h3>Contemporary Open Bedroom</h3>
+        <p>Minimalist yet elegant bedroom with ample space and a modern bed design.</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/73c1fe2603c7c84b_6792-w360-h360-b0-p0--.jpg" alt="Modern Bed 7">
+        <h3>Modern Bed with Luxury Design</h3>
+        <p>Luxurious yet minimalist design with a comfortable bed frame for restful nights.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/3701568806320337_6596-w360-h360-b0-p0--.jpg" alt="Modern Bed 8">
+        <h3>Urban Chic Bedroom</h3>
+        <p>Sleek bed with contemporary design and a welcoming atmosphere for any bedroom.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/f2c1e635052632a9_2845-w360-h360-b0-p0--.jpg" alt="Modern Bed 9">
+        <h3>Elegant Bedroom Setup</h3>
+        <p>Modern design with a refined bed frame and clean, minimal styling.</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/d8d1b0640261100e_2228-w360-h360-b0-p0--.jpg" alt="Modern Bed 10">
+        <h3>Luxury Contemporary Bed</h3>
+        <p>Stylish bed with an emphasis on comfort and sophisticated design.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/59a1312e030ce810_0230-w360-h360-b0-p0--.jpg" alt="Modern Bed 11">
+        <h3>Sleek Modern Bed</h3>
+        <p>Perfectly designed bed frame for a sleek, contemporary bedroom vibe.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://st.hzcdn.com/fimgs/8e41e356060d2503_1994-w360-h360-b0-p0--.jpg" alt="Modern Bed 12">
+        <h3>Open Layout Bedroom</h3>
+        <p>Bright and airy space with a modern bed frame and inviting ambiance.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Modern Bed Design. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    console.log("Modern Bed Design Page Loaded!");
+</script>
+
+</body>
+</html>

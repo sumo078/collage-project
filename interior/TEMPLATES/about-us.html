@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #contain{
+        width: 100%;
+    }
+#contain img{
+    width: 100%;
+}
+.contain2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+}
+#para{
+    margin-left: 400px;
+    margin-right: 400px;
+
+    text-align: center;
+}
+#description{
+    color: rgb(78, 74, 74);
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+ 
+.contain3{
+
+    justify-content: center;
+    align-items: center;
+   display: flex;
+   flex-direction: column;
+    background-color: rgb(241, 240, 240);
+    width: 100%;
+    height: 500px;
+    
+}
+.contain4{
+    margin-right: 20rem;
+    padding: 1rem;
+    margin-top: 4rem;
+   display: flex;
+   flex-direction: column;
+    background-color: rgb(228, 215, 215);
+    width: 100%;
+    height: 300px;
+}
+#block1{
+   
+    box-shadow: 3px 3px 3px black;
+    background-color: rgb(253, 253, 246);
+    height: 9rem;
+    width: 10rem;
+}
+
+#block2{
+    box-shadow: 3px 3px 3px black;
+    margin-left: 1px;
+    background-color: rgb(255, 255, 255);
+    height: 9rem;
+    width: 10rem;
+}
+
+#block3{
+    
+    box-shadow: 3px 3px 3px black;
+    background-color: rgb(251, 251, 249);
+    height: 9rem;
+    width: 10rem;
+}
+.information{
+    margin: 0.5rem;
+    justify-content: center;
+   align-items: center;
+    
+    font-size: small;
+}
+#i{
+height: 4rem;
+width: 4rem;
+}
+.box{
+display: flex;
+gap: 4rem;
+}
+
+#head{
+    margin: 2rem;
+}
+.box1{
+ box-shadow: 4px 1px 5px black;
+  border: 1px solid rgb(171, 167, 167);
+  height: 6rem; 
+  width: 11rem;
+}
+.box2{
+    box-shadow: 4px 1px 5px black;
+    margin-top: 4rem;
+    border: 1px solid rgb(171, 167, 167);
+    height: 6rem; 
+    width: 11rem;
+  }
+  .box3{
+    box-shadow: 4px 1px 5px black;
+    border: 1px solid rgb(171, 167, 167);
+    height: 6rem; 
+    width: 11rem;
+  }
+  .box4{
+    box-shadow: 4px 1px 5px black;
+    margin-top: 4rem;
+    border: 1px solid rgb(171, 167, 167);
+    height: 6rem; 
+    width: 11rem;
+  }
+  .box5{
+    box-shadow: 4px 1px 5px black;
+    border: 1px solid rgb(171, 167, 167);
+    height: 6rem; 
+    width: 11rem;
+  }
+
+  
+
+#im{
+    height: 6rem;
+    width: 11rem;
+}
+.bos{
+     margin-right: 23rem;
+     margin-top: 1rem;
+     width: 100%;
+     margin-left:15rem ;
+     gap: 3rem;
+   
+     display: flex;
+     flex-direction: row;
+
+   }
+.heading{
+    margin-left: 20rem;
+}
+.contain5{
+    box-shadow: 3px -2px 1px  black;
+    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
+   display: flex;
+   flex-direction: column;
+    background-color: rgb(241, 240, 240);
+    width: 100%;
+    height: 500px;
+    background-color: rgb(200, 225, 225);
+}
+.but{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.boxi1{
+    box-shadow: 4px 1px 5px black;
+    margin-top: 2rem;
+    margin-right: 15rem;
+    margin-left: 15rem;
+    width: 80%;
+    height: 300px;
+    align-self: center;
+    background-color: rgb(200, 225, 225);
+}
+.image{
+    width: 100%;
+}
+.centerd{
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+#button{
+    border-radius: 30%;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 8rem;
+    background-color: rgb(230, 63, 130);
+}
+.image{
+    position: relative;
+}
+.content{
+    /* overflow: hidden; */
+    width: 100%;
+    height: 500px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(227, 244, 244);
+}
+.galleryright{
+    overflow: hidden;
+    display: flex;
+    height:250px;
+    width: 55%;
+    background-color: rgb(243, 252, 252);
+  }
+
+  .right1{
+    width: 250px;
+    margin:0 8px;
+    box-shadow: 2px 10px 3px rgba(0,0,0,.1);
+    height: 10rem;
+  }
+#jpg{
+    height: 10rem;
+    width: 9rem;
+}
+.left{
+    margin-top: 3rem;
+    margin-left: 15rem;
+    align-items: center;
+    height: 150px;
+    width: 30%;transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.right:hover{
+transform: scale(1.05);
+box-shadow: 0 4px 8px rgba(0,0,0,2);
+border: 1px solid blue;
+
+}
+
+#pp{
+    font-size: 0.98rem;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+<!-- image section -->
+  <div id="contain">
+     <img src="https://images.livspace-cdn.com/w:1920/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/desktop-1629737941-hmPTx/banner-1629737956-i7zW4/about-us-badge-web-v2-1632314148-aLxC5.jpg" alt="" id="img">
+    </div>
+<!-- close -->
+ <div class="contain2">
+    <div id="para">
+  <h1>How it started</h1>
+  <p id="description">It all started when collage friends,Anuj srivastava and Ramakant Sharma, set upon their dream homes. It 
+    did't take them long to realise
+    how fragmented the industry was and how factors like identifying the right professionals,
+coordination of tasks, and ensuring fair price and quality were pain faced by many. </p>
+
+<p id="description">Determined to fix this and offer a happier experience to homeowners, they built a much needed bridge for the industry. A.R architect was founded in 2018. It is now the trusted brand for complite home interior design and renovation for thousands of homeowners</p>
+ </div>
+ </div>
+
+ <div class="contain3">
+    <h1 id="head">We'll let our numbers do the talking</h1>
+    <div class="box">
+    <div id="block1">
+        <div class="information">
+        <img src="https://images.livspace-cdn.com/w:100/h:100/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/about-us-sg-1616644967-PxdrV/we-are-global-1616645135-X2w3R/customers-1616645589-2OgWs.png"alt="" id="i">
+        <h4>1,00,000+</h4>
+        <p>#A.R architect</p>
+        </div>
+        </div>
+
+
+        <div id="block2">
+            <div class="information">
+            <img src="https://images.livspace-cdn.com/w:100/h:100/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/about-us-sg-1616644967-PxdrV/we-are-global-1616645135-X2w3R/2countries-1616645587-0JGeq.png" alt="" id="i">
+            <h4>3 countries</h4>
+            <p>85+ cities</p>
+            </div>
+</div>
+
+
+            <div id="block3">
+                <div class="information">
+                <img src="https://images.livspace-cdn.com/w:100/h:100/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/about-us-sg-1616644967-PxdrV/we-are-global-1616645135-X2w3R/designers-1616645590-Qc7lK.png"alt="" id="i">
+                <h4>3,500+</h4>
+                <p>expert designers</p>
+                </div>
+                
+    </div>
+ </div>
+ </div>
+<div class="content">
+    <div class="left">
+        <h1>The team behind our success</h1>
+        <p id="pp">our diverse team of award-winning designers and experts <br>
+            are here to make your home the best it could be.
+        </p>
+    </div>
+<div class="galleryright">
+        <div class="right1">
+           <img src="/static/img/IMG20241202152526.jpg" alt="" id="jpg">
+        </div>
+
+        <div class="right1">
+            <img src="/static/img/images.jpg" alt="" id="jpg">
+         </div>
+
+         <div class="right1">
+            <img src="/static/img/images (1).jpg" alt="" id="jpg">
+         </div>
+
+         <div class="right1">
+            <img src="/static/img/605acdc7-6157-48eb-84f0-27e432126c611591355165720-Mast--Harbour-Men-Shirts-4111591355163609-1.webp" alt="" id="jpg">
+         </div>
+
+         <div class="right1">
+            <img src="/static/img/-473Wx593H-464961086-red-MODEL.avif" alt="" id="jpg">
+         </div>
+
+         
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="contain4">
+    <div class="heading">
+        <h1>Backed by the best</h1>
+    </div>
+<div class="bos">
+  <div class="boxes">
+     <div class="box1">
+        <img src="https://images.livspace-cdn.com/w:196/h:86/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/about-us-sg-1616644967-PxdrV/investors-1616645235-znByz/37-1616645342-ZRX3o.png" alt="" id="im">
+     </div>
+     </div>
+  
+
+  <div class="boxes">
+    <div class="box2">
+        <img src="https://images.livspace-cdn.com/w:196/h:86/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/about-us-sg-1616644967-PxdrV/investors-1616645235-znByz/27-1616645332-a90ZO.png" alt="" id="im">
+    </div>
+    </div>
+ 
+
+    <div class="boxes">
+        <div class="box3">
+            <img src="https://images.livspace-cdn.com/w:196/h:86/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/about-us-sg-1616644967-PxdrV/investors-1616645235-znByz/29-1616645335-LyW8t.png" alt="" id="im">
+        </div>
+        </div>
+
+
+
+        <div class="boxes">
+            <div class="box4">
+                <img src="https://images.livspace-cdn.com/w:196/h:86/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/about-us-sg-1616644967-PxdrV/investors-1616645235-znByz/30-1616645336-uEzlZ.png" alt="" id="im">
+            </div>
+            </div>
+
+
+            <div class="boxes">
+                <div class="box5">
+                    <img src="https://images.livspace-cdn.com/w:196/h:86/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/about-us-sg-1616644967-PxdrV/investors-1616645235-znByz/33-1616645339-XtODm.png" alt="" id="im">
+                </div>
+                </div>
+
+
+               
+        
+
+
+
+ 
+</div>
+</div>
+   <div class="contain5">
+      <h1>Designing home across india</h1>
+       <div class="boxi1">
+            <div class="boxi">
+                <img src="https://images.livspace-cdn.com/w:148/h:148/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/cities-1629793122-i88zm/new-icons-1652449666-kOLQo/jaipur-1653995530-N1Xvo.png" alt="">
+                <img src="https://images.livspace-cdn.com/w:148/h:148/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/cities-1629793122-i88zm/new-icons-1652449666-kOLQo/kolkata-1653995542-bWg3T.png" alt="">
+                <img src="https://images.livspace-cdn.com/w:148/h:148/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/cities-1629793122-i88zm/new-icons-1652449666-kOLQo/lucknow-1653995545-YFzoe.png" alt="">
+                <img src="https://images.livspace-cdn.com/w:148/h:148/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/cities-1629793122-i88zm/new-icons-1652449666-kOLQo/nagpur-1653995552-K7U1d.png" alt="">
+                <img src="https://images.livspace-cdn.com/w:148/h:148/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/cities-1629793122-i88zm/new-icons-1652449666-kOLQo/surat-1653995574-afQ7K.png" alt="">
+                <img src="https://images.livspace-cdn.com/w:148/h:148/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/cities-1629793122-i88zm/new-icons-1652449666-kOLQo/pune-1653995572-ZQh3j.png" alt="">
+                <img src="https://images.livspace-cdn.com/w:148/h:148/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/cities-1629793122-i88zm/new-icons-1652449666-kOLQo/mumbai-1653995549-zsNSM.png" alt="">
+                <img src="https://images.livspace-cdn.com/w:148/h:148/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/cities-1629793122-i88zm/new-icons-1652449666-kOLQo/goa-1653995518-YKkQH.png" alt="">
+                <img src="https://images.livspace-cdn.com/w:148/h:148/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/cities-1629793122-i88zm/new-icons-1652449666-kOLQo/chennai-1653995506-il2WF.png" alt="">
+                <img src="https://images.livspace-cdn.com/w:148/h:148/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/cities-1629793122-i88zm/new-icons-1652449666-kOLQo/bhopal-1653995501-dngZG.png" alt="">
+                <img src="https://images.livspace-cdn.com/w:148/h:148/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/cities-1629793122-i88zm/new-icons-1652449666-kOLQo/ahmedabad-1653995498-2KyAy.png" alt="">
+                <img src="https://images.livspace-cdn.com/w:148/h:148/dpr:1/plain/https://d3gq2merok8n5r.cloudfront.net/bumblebee/in/about-us-1629737930-WrXkD/cities-1629793122-i88zm/new-icons-1652449666-kOLQo/bengaluru-1653995499-jTv1u.png" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+       </div>
+
+      
+   </div>
+<div class="image">
+   <img src="https://images.livspace-cdn.com/w:1920/h:370/plain/https://d3ai42rl8fy79o.cloudfront.net/galactus/templates/banner_desktop.jpg.1597907574886" alt="" id=img>
+  <div class="centerd">
+  <h1>your dream home is just a click away</h1>
+  <div class="but">
+   <button id="button">Get started</button>
+  </div>
+  </div>
+   </div>
+   </div>
+    </body>
+</html>
